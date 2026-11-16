@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barranco · Reconstrucciones</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/multi.css">
+  <link rel="stylesheet" href="/align.css">
+  <script src="/app.js" defer></script>
+  <script src="/cloud-cache.js" defer></script>
+  <script src="/cloud-renderer.js" defer></script>
+  <script src="/align.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Barranco <span>/ Reconstrucciones</span></div>
+    <nav class="app-tabs" aria-label="Secciones"><button id="alignTab" class="active">Alineación</button><button id="roiTab">Polígonos / ROI</button></nav>
+    <div class="block-badge"><span class="status-dot"></span>MANZANA ACTIVA <b id="activeBlock">025</b><span class="badge-sub">recorte independiente</span></div>
+    <div class="local-badge">LOCAL <span>127.0.0.1</span></div>
+  </header>
+
+  <section id="alignWorkspace"></section>
+  <main id="roiWorkspace" hidden>
+    <section class="workspace">
+      <div class="workspace-head"><div><h1>Delimitar ROI</h1><p>Vista superior · sparse original · ninguna manzana se modifica</p></div></div>
+      <div class="context-bar"><button id="overviewBtn">Ver conjunto</button><button id="focusBlockBtn">Enfocar activa</button><button id="roiControlsToggle" aria-expanded="false">Controles ROI</button><label><input id="contextToggle" type="checkbox" checked> Contexto</label><span id="catalogProgress">Preparando catálogo…</span></div>
+      <div class="toolbar" aria-label="Herramientas de selección">
+        <button id="drawBtn" class="primary">＋ Dibujar polígono</button>
+        <button id="editBtn">Editar vértices</button>
+        <button id="panBtn" class="active">Mover vista</button>
+        <span class="separator"></span>
+        <button id="closeBtn" disabled>Cerrar contorno</button>
+        <button id="undoBtn" title="Deshacer (Ctrl+Z)" aria-label="Deshacer">↶</button>
+        <button id="redoBtn" title="Rehacer (Ctrl+Shift+Z)" aria-label="Rehacer">↷</button>
+        <button id="clearBtn" class="danger-quiet">Limpiar</button>
+      </div>
+      <div class="canvas-shell" id="canvasShell">
+        <canvas id="mapCanvas" tabindex="0" aria-label="Conjunto sparse alineado. Solo se recortan los puntos de la manzana activa."></canvas>
+        <div class="canvas-label"><span class="status-dot"></span><span id="layerLabel">Cargando sparse…</span></div>
+        <div class="north-indicator">N<span>↑</span></div>
+        <div id="loading" class="loading"><span class="spinner"></span><strong id="loadingTitle">Preparando las manzanas activas</strong><small>Solo sparse; no se requiere una copia local de las densas.</small></div>
+        <div class="map-controls"><button id="focusBtn" title="Encuadrar zona principal">Zona principal</button><button id="fitBtn" title="Incluye todos los puntos, también los lejanos">Ver todos</button><button id="zoomInBtn" aria-label="Acercar">＋</button><button id="zoomOutBtn" aria-label="Alejar">−</button></div>
+        <div class="canvas-bottom"><span id="coordinates">E — · N —</span><span id="scaleLabel">— m</span></div>
+      </div>
+      <div class="under-map"><span><i class="legend inside"></i>Conservar en la activa</span><span><i class="legend outside"></i>Exterior / contexto</span><span id="helpText">Rueda: zoom · arrastrar: desplazar · dibuja un contorno para seleccionar.</span></div>
+      <div id="notice" class="notice" role="status" aria-live="polite">Conectando con los datos locales…</div>
+    </section>
+
+    <aside class="sidebar" id="roiInspector" inert aria-hidden="true">
+      <button id="roiControlsClose" aria-label="Cerrar controles ROI">✕</button>
+      <section class="card"><span class="eyebrow">MANZANA A DELIMITAR</span><label class="field-label" for="blockSelect">Selecciona una reconstrucción activa</label><select id="blockSelect" aria-label="Manzana a delimitar"></select><h2 id="blockTitle">Manzana 025</h2><div class="data-row"><span>Máquina asignada</span><b id="nodeName">—</b></div><div class="data-row"><span>Puntos sparse</span><b id="sparseTotal">—</b></div><div class="data-row"><span>Vista / unidades</span><b>Este / Norte · m</b></div><p id="placementNote" class="placement-note">Alineación existente</p><label class="field-label" for="colorMode">Color de los puntos activos</label><select id="colorMode"><option value="rgb">RGB original</option><option value="height">Altura</option><option value="mono">Monocromo</option></select><label class="point-size">Tamaño <input id="pointSize" type="range" min="1" max="4" step="0.5" value="1.5"></label><p class="fine-print">Las anclas conservan sus colocaciones. Las nuevas revisiones aparecen solo después de aprobarlas.</p></section>
+
+      <section class="card selection-card"><span class="eyebrow">02 / CONSERVAR</span><h2>Tu polígono</h2><div class="selection-status" id="selectionStatus">Sin contorno</div><div class="data-row"><span>Vértices</span><b id="vertexCount">0</b></div><div class="data-row"><span>Área</span><b id="areaValue">—</b></div><div class="data-row"><span>Sparse interiores</span><b id="sparseKept">—</b></div><label class="field-label" for="selectionName">Nombre de la revisión</label><input id="selectionName" maxlength="100" placeholder="Contorno a conservar"><button id="saveBtn" class="primary full" disabled>Guardar selección y JSON</button><button id="downloadJsonBtn" class="full" disabled>Descargar JSON de esta manzana</button><p id="configInfo" class="fine-print config-info"></p><button id="nextBlockBtn" class="full">Siguiente manzana pendiente →</button><p class="fine-print">Se conserva el interior y el borde de la activa, a todas las alturas. Guardar prepara su JSON; no lanza mallado.</p></section>
+
+      <section class="card"><div class="card-title"><h2>Revisiones guardadas</h2><button id="refreshBtn" class="text-button">Actualizar</button></div><select id="savedSelect" aria-label="Revisión guardada"><option value="">Ninguna selección guardada</option></select><button id="loadBtn" class="full" disabled>Abrir revisión</button><p id="savedInfo" class="fine-print">Guardar crea una revisión nueva.</p></section>
+
+
+      <section class="card" id="pilotPanel" hidden><span class="eyebrow">PILOTO DE SUPERFICIES · 025</span><h2>Comparación de mallas</h2><p class="fine-print" id="pilotStatus"></p><a id="pilotLink" href="/pilot/" target="_blank" rel="noopener" hidden>Abrir galería del piloto ↗</a><p class="fine-print">Corresponde al polígono guardado para el primer piloto. Consulta su identificador en la galería.</p></section>
+
+    </aside>
+  </main>
+  <footer>Datos locales · selección reproducible por manzana <span>map_world / EPSG:32718 · XY métrico</span></footer>
+</body>
+</html>

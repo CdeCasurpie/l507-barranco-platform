@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "l507-lab-deploy"
+version = "0.1.0"
+description = "Coordinated, resumable release deployment for the L507 GPU laboratory"
+requires-python = ">=3.11"
+dependencies = ["pexpect>=4.8,<5"]
+
+[project.scripts]
+labctl = "labdeploy.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["labdeploy*"]
+
+[tool.setuptools.data-files]
+"share/l507-lab-deploy/config" = ["config/*.json"]
+"share/l507-lab-deploy/releases" = ["releases/*.json"]

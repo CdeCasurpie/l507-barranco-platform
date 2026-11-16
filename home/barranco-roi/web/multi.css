@@ -1,0 +1,11 @@
+.context-bar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:-2px 0 15px;padding:10px 12px;border:1px solid #2a3c4e;border-radius:9px;background:#111d2b}
+.context-bar label{display:flex;align-items:center;gap:7px;color:#b4c7db;font-size:11px;cursor:pointer;white-space:nowrap}
+.context-bar input[type=checkbox]{width:auto;flex:none;margin:0;accent-color:#65e4b1}
+.context-bar>span{margin-left:auto;font-size:11px;color:#65e4b1}
+#blockSelect{border-color:#477961;background:#10281f;font-size:14px;font-weight:600;padding:12px 10px;margin-bottom:9px}
+#blockTitle{font-size:20px;margin:7px 0}
+.placement-note{font-size:10px;line-height:1.7;color:#a8bdce;margin:12px 0;padding:7px 9px;background:#0e1823;border-radius:6px}
+.placement-note.manual{color:#ffe0b3;border:1px solid #6f5330;background:#2a2116}
+.config-info{overflow-wrap:anywhere;color:#b7dbc9}
+.card a{display:block;color:#65e4b1;margin-top:12px;font-size:12px}
+@media(max-width:760px){.context-bar>span{width:100%;margin-left:0}.context-bar label{font-size:10px;white-space:normal}}

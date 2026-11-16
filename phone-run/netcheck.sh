@@ -1,0 +1,4 @@
+# Conexiones TCP establecidas a IPs fuera de loopback y de la LAN 192.0.2.0/25, + herramientas de acceso remoto
+echo "who: $(who | awk '{print $1"@"$2"("$5")"}' | tr '\n' ' ')"
+ss -Htn state established 2>/dev/null | awk '{print $3, $4}' | awk '{split($2,p,":"); r=$2; sub(/:[0-9]+$/,"",r); gsub(/[\[\]]/,"",r); if (r ~ /^127\./ || r ~ /^::1$/ || r ~ /^10\.100\.41\./ || r ~ /^::ffff:10\.100\.41\./ || r ~ /^::ffff:127\./) next; print "EXT " $1 " -> " $2}' | sort | uniq -c | sort -rn | head -12
+ps -eo user,etime,comm,args --no-headers | grep -Ei 'zerotier|tailscale|anydesk|teamviewer|rustdesk|cloudflared|ngrok|code-tunnel|code tunnel|frpc|wireguard|wg-quick|openvpn|x11vnc|vino|krfb|gnome-remote|xrdp|chrome-remote|sshd: [a-z_]+@' | grep -v grep | awk '{$4=substr($0, index($0,$4)); print "PROC", $1, $2, substr($4,1,90)}' | head -10

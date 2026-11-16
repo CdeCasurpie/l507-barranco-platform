@@ -1,0 +1,307 @@
+{
+  "artifacts": [
+    {
+      "bytes": 5852630528,
+      "local_candidates": [
+        "imports/photogrammetry-baseline.tar",
+        "checkpoints/baseline-before-segmentation-v1/photogrammetry-baseline.tar"
+      ],
+      "name": "photogrammetry-baseline.tar",
+      "sha256": "b6297c878cef512ffc4179c952505d7f10db63aa4730f4feced96c8ff5260370",
+      "source_paths": {
+        "L507_012": [
+          "checkpoints/baseline-before-segmentation-v1/photogrammetry-baseline.tar",
+          "imports/photogrammetry-baseline.tar"
+        ],
+        "L507_014": [
+          "imports/photogrammetry-baseline.tar",
+          "checkpoints/baseline-before-segmentation-v1/photogrammetry-baseline.tar"
+        ]
+      }
+    },
+    {
+      "bytes": 6484233728,
+      "local_candidates": [
+        "imports/segmentation-image.tar",
+        "checkpoints/segmentation-release-v1/segmentation-image.tar"
+      ],
+      "name": "segmentation-image.tar",
+      "sha256": "8ba01eab5461c3f45f94fe524c97bcaae7377a431b530f137daed783d3ea2416",
+      "source_paths": {
+        "L507_012": [
+          "checkpoints/segmentation-release-v1/segmentation-image.tar",
+          "imports/segmentation-image.tar"
+        ],
+        "L507_014": [
+          "imports/segmentation-image.tar",
+          "checkpoints/segmentation-release-v1/segmentation-image.tar"
+        ]
+      }
+    },
+    {
+      "bytes": 708476241,
+      "local_candidates": [
+        "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4"
+      ],
+      "name": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4",
+      "sha256": "795aff1f9f45cb64c952199bc874ce83b69089eaeee412fcf604c0fe5819476c",
+      "source_paths": {
+        "L507_012": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4"
+        ],
+        "L507_014": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4"
+        ]
+      },
+      "target": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4"
+    },
+    {
+      "bytes": 237,
+      "local_candidates": [
+        "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4.fetch.json"
+      ],
+      "name": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4.fetch.json",
+      "sha256": "6c54b2c38a058a388a1158f524eb6bb1672fb61806c820c6f60849840207a5bd",
+      "source_paths": {
+        "L507_012": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4.fetch.json"
+        ],
+        "L507_014": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4.fetch.json"
+        ]
+      },
+      "target": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.MP4.fetch.json"
+    },
+    {
+      "bytes": 413911,
+      "local_candidates": [
+        "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT"
+      ],
+      "name": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT",
+      "sha256": "819d2d3e5eb0d9ce573b95e46dd8aaac6cc73a0305031973a676f5294fe7bd2e",
+      "source_paths": {
+        "L507_012": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT"
+        ],
+        "L507_014": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT"
+        ]
+      },
+      "target": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT"
+    },
+    {
+      "bytes": 233,
+      "local_candidates": [
+        "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT.fetch.json"
+      ],
+      "name": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT.fetch.json",
+      "sha256": "7bde87bb9f82be9861fc9156e4996e89340c31283361a0a5b349a1cf4d39b624",
+      "source_paths": {
+        "L507_012": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT.fetch.json"
+        ],
+        "L507_014": [
+          "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT.fetch.json"
+        ]
+      },
+      "target": "datasets/raw/cuadra-025/drone/DJI_20261024124736_0527_D.SRT.fetch.json"
+    },
+    {
+      "bytes": 25843,
+      "local_candidates": [
+        "models/sam3/config.json"
+      ],
+      "name": "models/sam3/config.json",
+      "sha256": "4616385e4b21f2e5e22c875b65679185cbccfa95de42542b9166f7dc3d57160f",
+      "source_paths": {
+        "L507_012": [
+          "models/sam3/config.json"
+        ],
+        "L507_014": [
+          "models/sam3/config.json"
+        ]
+      },
+      "target": "models/sam3/config.json"
+    },
+    {
+      "bytes": 3450062241,
+      "local_candidates": [
+        "models/sam3/sam3.pt"
+      ],
+      "name": "models/sam3/sam3.pt",
+      "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+      "source_paths": {
+        "L507_012": [
+          "models/sam3/sam3.pt"
+        ],
+        "L507_014": [
+          "models/sam3/sam3.pt"
+        ]
+      },
+      "target": "models/sam3/sam3.pt"
+    },
+    {
+      "bytes": 376,
+      "local_candidates": [
+        "models/sam3/weights-manifest.json"
+      ],
+      "name": "models/sam3/weights-manifest.json",
+      "sha256": "d2764c5fe5bf8acf3bfc0e6a4208c71b18dc58b815f12cb3bbe9c96765307836",
+      "source_paths": {
+        "L507_012": [
+          "models/sam3/weights-manifest.json"
+        ],
+        "L507_014": [
+          "models/sam3/weights-manifest.json"
+        ]
+      },
+      "target": "models/sam3/weights-manifest.json"
+    },
+    {
+      "bytes": 1682,
+      "local_candidates": [
+        "models/segformer/config.json"
+      ],
+      "name": "models/segformer/config.json",
+      "sha256": "ae4f8cf860df088dc5565a45dd8b309b140bfc6a14ac51f403a4bc6b1e992b24",
+      "source_paths": {
+        "L507_012": [
+          "models/segformer/config.json"
+        ],
+        "L507_014": [
+          "models/segformer/config.json"
+        ]
+      },
+      "target": "models/segformer/config.json"
+    },
+    {
+      "bytes": 273,
+      "local_candidates": [
+        "models/segformer/preprocessor_config.json"
+      ],
+      "name": "models/segformer/preprocessor_config.json",
+      "sha256": "697d92c83640ee381065f575ebdaef42d00d44483a827b92265026c0173dcbbf",
+      "source_paths": {
+        "L507_012": [
+          "models/segformer/preprocessor_config.json"
+        ],
+        "L507_014": [
+          "models/segformer/preprocessor_config.json"
+        ]
+      },
+      "target": "models/segformer/preprocessor_config.json"
+    },
+    {
+      "bytes": 338896453,
+      "local_candidates": [
+        "models/segformer/pytorch_model.bin"
+      ],
+      "name": "models/segformer/pytorch_model.bin",
+      "sha256": "bdefc7b5bf4b548d347e6bcbe3ab1a0ff4370047211ae9e56c9e53dfb1f78033",
+      "source_paths": {
+        "L507_012": [
+          "models/segformer/pytorch_model.bin"
+        ],
+        "L507_014": [
+          "models/segformer/pytorch_model.bin"
+        ]
+      },
+      "target": "models/segformer/pytorch_model.bin"
+    },
+    {
+      "bytes": 565,
+      "local_candidates": [
+        "models/segformer/weights-manifest.json"
+      ],
+      "name": "models/segformer/weights-manifest.json",
+      "sha256": "38cb0d5dd9acc8050dffd62cf6c158bad3694e74555a0e8d21b60ab2a4783cd4",
+      "source_paths": {
+        "L507_012": [
+          "models/segformer/weights-manifest.json"
+        ],
+        "L507_014": [
+          "models/segformer/weights-manifest.json"
+        ]
+      },
+      "target": "models/segformer/weights-manifest.json"
+    }
+  ],
+  "environment": {
+    "IMAGE": "photogrammetry:l507-v1-pycolmap",
+    "PG_CPUS": 8,
+    "PG_EXPECTED_IMAGE_ID": "sha256:1a3c25a01680253192d7b95bb57abb3c2a680a1db8d9888c6fe533fcf08e98e0",
+    "PG_MEMORY": "48g",
+    "PG_MIN_FREE_GIB": 20,
+    "PG_NETWORK": "none",
+    "PG_QUIET_ENTRYPOINT": 1,
+    "PG_SEG_IMAGE": "photogrammetry-seg:l507-v1",
+    "PG_SEG_IMAGE_ID": "sha256:9679fd9e51dac6b80cd7fdd75d43b3976c783c81393c25f407e24e14bd127042"
+  },
+  "git": {
+    "commit": "a45d44258f5199b06aa57f7d6ae947f40c5326ed",
+    "url": "https://github.com/AaronCS25/photogrammetry-pipeline.git"
+  },
+  "images": [
+    {
+      "archive": "photogrammetry-baseline.tar",
+      "id": "sha256:1a3c25a01680253192d7b95bb57abb3c2a680a1db8d9888c6fe533fcf08e98e0",
+      "tag": "photogrammetry:l507-v1-pycolmap"
+    },
+    {
+      "archive": "segmentation-image.tar",
+      "id": "sha256:9679fd9e51dac6b80cd7fdd75d43b3976c783c81393c25f407e24e14bd127042",
+      "tag": "photogrammetry-seg:l507-v1"
+    }
+  ],
+  "name": "l507-segmentation-v1",
+  "schema": 1,
+  "verify": {
+    "commands": [
+      [
+        "bash",
+        "containers/lab-run.sh",
+        "doctor",
+        "--profile",
+        "dense",
+        "--scene",
+        "cuadra-025",
+        "--config",
+        "configs/experiments/segmentation-025-0-10s/combined.yaml",
+        "--json"
+      ],
+      [
+        "bash",
+        "containers/lab-segment.sh",
+        "doctor",
+        "--profile",
+        "segmentation",
+        "--scene",
+        "cuadra-025",
+        "--config",
+        "configs/experiments/segmentation-025-0-10s/combined.yaml",
+        "--json"
+      ],
+      [
+        "bash",
+        "containers/docker-run.sh",
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      [
+        "bash",
+        "containers/lab-experiment.sh",
+        "--scene",
+        "cuadra-025",
+        "--config",
+        "configs/experiments/segmentation-025-0-10s/combined.yaml"
+      ]
+    ],
+    "metrics": "outputs/cuadra-025/seg025_0_10s_combined_v1/metrics/metrics.json"
+  }
+}

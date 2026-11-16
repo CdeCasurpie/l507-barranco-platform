@@ -1,0 +1,12 @@
+.state/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+*.bundle
+*.tar
+*.log
+site.local.json

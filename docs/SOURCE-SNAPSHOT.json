@@ -1,0 +1,1302 @@
+{
+  "snapshot_date": "2026-11-16",
+  "source_commits": {
+    "toolkit": "ac87ca9d782e66dcb45c841b25134b2dfcb721e9",
+    "orchestration": "12858c6d1d30f82f2163a65b9fbc3ebfa411c633"
+  },
+  "files": [
+    {
+      "path": "Makefile",
+      "source_sha256": "9c7507402d2200f9f7f872f86ec8baf89fd73829bed87c07c7da90ac5983b57b",
+      "public_sha256": "18c5bfcfa072dce2af9790f12c758305f764ca496fc3554bfdf29726e3de400d",
+      "sanitized": true
+    },
+    {
+      "path": "lab/README.md",
+      "source_sha256": "113c57133788e88e4de8309e6ed62bd898ff5868ccdfe953e811d1df2b32b518",
+      "public_sha256": "8b4d8eec65104c644ce73ef1f5a3618fa7941cd15ff2cc21e7f67c1ee83440ab",
+      "sanitized": true
+    },
+    {
+      "path": "lab/config/credentials.example.json",
+      "source_sha256": "ffb4c9dcae86217b89f99875162c4bd6c6855f902a83703bf316dccb5f086bdc",
+      "public_sha256": "ffb4c9dcae86217b89f99875162c4bd6c6855f902a83703bf316dccb5f086bdc",
+      "sanitized": false
+    },
+    {
+      "path": "lab/docs/architecture.md",
+      "source_sha256": "98ea6fb402553947204f5b691a1b688105918f2717b840dbc8d324a5ffbf5c9e",
+      "public_sha256": "98ea6fb402553947204f5b691a1b688105918f2717b840dbc8d324a5ffbf5c9e",
+      "sanitized": false
+    },
+    {
+      "path": "lab/requirements.txt",
+      "source_sha256": "3be6f7518f55419916df20c078535ab5438a3b81a88d558ee134c7a08f7e13b9",
+      "public_sha256": "3be6f7518f55419916df20c078535ab5438a3b81a88d558ee134c7a08f7e13b9",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_config.py",
+      "source_sha256": "88c5499b5c33c53dee22f46d407c91a799f78cc20df99caca50f344ccb158f67",
+      "public_sha256": "88c5499b5c33c53dee22f46d407c91a799f78cc20df99caca50f344ccb158f67",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_inventory.py",
+      "source_sha256": "59694275dc6691af556a16d3ba429950fc90d81d02fe75d44a05185ba62fdd68",
+      "public_sha256": "6eabffd82efd99e7a9768b6dd6071fdd62a79b3315933568d6346c86447c039e",
+      "sanitized": true
+    },
+    {
+      "path": "lab/scripts/lab_lock_all.py",
+      "source_sha256": "bab33405541618c4745df5f3510c6cb8112a67ba4df92a8f87c206ce867f4f37",
+      "public_sha256": "bab33405541618c4745df5f3510c6cb8112a67ba4df92a8f87c206ce867f4f37",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_logout.py",
+      "source_sha256": "7f196c638a5c5af55c27c9d414223caa9721fed999acf3639bb97d5ce4be0a49",
+      "public_sha256": "7f196c638a5c5af55c27c9d414223caa9721fed999acf3639bb97d5ce4be0a49",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_monitor.py",
+      "source_sha256": "c9974010a5ff2c7f892d6e0ab15acc1f5a07666aa3afd7106d28ece803d66597",
+      "public_sha256": "b8cae148e7279733b51ad76cce6811f27244986298dbab84689ec90ab15e05c7",
+      "sanitized": true
+    },
+    {
+      "path": "lab/scripts/lab_restart_all.py",
+      "source_sha256": "40d4e28b1cc26f7f67a13dee83f3a83b78ed15e69b3c64227c0d74e1796fe22f",
+      "public_sha256": "40d4e28b1cc26f7f67a13dee83f3a83b78ed15e69b3c64227c0d74e1796fe22f",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_turnoff.py",
+      "source_sha256": "60e5615547ea9995268101400543d3b657e77dbf865a859ed6db9af7b4e0920f",
+      "public_sha256": "4244a6c8c4c04e6c45213e7feb193d21a9365da92de891de7f88665d07a521a4",
+      "sanitized": true
+    },
+    {
+      "path": "lab/scripts/lab_unlock.py",
+      "source_sha256": "65a3db14bd6bf8e30d5e60fafceebd358fd17da7a9a1ce80c1fbac0c73993788",
+      "public_sha256": "65a3db14bd6bf8e30d5e60fafceebd358fd17da7a9a1ce80c1fbac0c73993788",
+      "sanitized": false
+    },
+    {
+      "path": "lab/scripts/lab_wake.py",
+      "source_sha256": "561645d5c9d1372ebb5005643fa67cbf1d6ace586bc5b8a7614d4b3ec7c3ed21",
+      "public_sha256": "207e8069960fc35402973c15d28453fd3088ebbfc17040162e9f9e2697d14c7a",
+      "sanitized": true
+    },
+    {
+      "path": "lab-deploy/.gitignore",
+      "source_sha256": "b7ac550590ad54890c24b775b76246b7f99d1a97f686d350a6fecbf307999022",
+      "public_sha256": "b7ac550590ad54890c24b775b76246b7f99d1a97f686d350a6fecbf307999022",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/README.md",
+      "source_sha256": "1e5ab8749cf02f4e647c0a76ac07d59b9a2339c28a45d783f85b4300241c5aea",
+      "public_sha256": "1e5ab8749cf02f4e647c0a76ac07d59b9a2339c28a45d783f85b4300241c5aea",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/docs/BARRANCO-CAMPAIGN.md",
+      "source_sha256": "ca24cb8552414ffb02135ad4550fe8d584a809cc63b2ccbe8304b0c95443f92f",
+      "public_sha256": "ca24cb8552414ffb02135ad4550fe8d584a809cc63b2ccbe8304b0c95443f92f",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/docs/BARRANCO-TIMINGS.md",
+      "source_sha256": "6c3e6f727cf5da7d1302ad2cefffbadeae422679363c635437d46af547e026f2",
+      "public_sha256": "6c3e6f727cf5da7d1302ad2cefffbadeae422679363c635437d46af547e026f2",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/docs/MESH-AND-BENCHMARK-PLAN.md",
+      "source_sha256": "a524f27620519e87e336bccf40b3fd9ff3eb0705469fc3333af4820906f0100b",
+      "public_sha256": "a524f27620519e87e336bccf40b3fd9ff3eb0705469fc3333af4820906f0100b",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/docs/VALIDATION.md",
+      "source_sha256": "f8725c16789254585097d56305354cd5de5ef9841a82894ece5de2c49c86319b",
+      "public_sha256": "e086cc97ed4e31df2c86c48f5ee6c897e43f7b4e5b5024a9258d08e1f78a13fb",
+      "sanitized": true
+    },
+    {
+      "path": "lab-deploy/labdeploy/__init__.py",
+      "source_sha256": "c1c9baffb3594acace3285f97447069afe16f0c0413b711883051ad93e7c0ccb",
+      "public_sha256": "c1c9baffb3594acace3285f97447069afe16f0c0413b711883051ad93e7c0ccb",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/__main__.py",
+      "source_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "public_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/agent.py",
+      "source_sha256": "adadab5164acb01d67e9dbd677dee8104f4068b68a4cc9de6c286bd34f0a03d6",
+      "public_sha256": "adadab5164acb01d67e9dbd677dee8104f4068b68a4cc9de6c286bd34f0a03d6",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/cli.py",
+      "source_sha256": "9c878f3e01853881028cd87757f34e8bd16fb2395c1a4296d3d7def85fd4a4cc",
+      "public_sha256": "9c878f3e01853881028cd87757f34e8bd16fb2395c1a4296d3d7def85fd4a4cc",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/config.py",
+      "source_sha256": "c7bd74c1a4b5b96bec838454d97d1040b9acd10fa2700da745e7038ff6767005",
+      "public_sha256": "c7bd74c1a4b5b96bec838454d97d1040b9acd10fa2700da745e7038ff6767005",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/inventory.py",
+      "source_sha256": "c62dc8bea2584f6ca89e9b5a01ffcdc3333e1768bdab634841897165ebe4fe94",
+      "public_sha256": "c62dc8bea2584f6ca89e9b5a01ffcdc3333e1768bdab634841897165ebe4fe94",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/ssh.py",
+      "source_sha256": "3aaddba49e6f8b1b51127004f8fe0e263da139e72953381e0dea352a8f19191a",
+      "public_sha256": "3aaddba49e6f8b1b51127004f8fe0e263da139e72953381e0dea352a8f19191a",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/labdeploy/store.py",
+      "source_sha256": "f59a18fc9e13761512e54699786eb7c6baa41ed6436bc9b759dd590edd9afa79",
+      "public_sha256": "63827a7b43684cb6ff1ef8743b0aabcdc98f0ffb63da6a9e6ac632ca4dbc9216",
+      "sanitized": false,
+      "consolidation_adapted": true
+    },
+    {
+      "path": "lab-deploy/labdeploy/volume_bridge.py",
+      "source_sha256": "07382a840c490129fa5dc5fd8c2923e1f049c5148c42238244a06cdf3359acb0",
+      "public_sha256": "07382a840c490129fa5dc5fd8c2923e1f049c5148c42238244a06cdf3359acb0",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/pyproject.toml",
+      "source_sha256": "5305301c7186d1c7a9cc2a8aac9b964a3d4cf492def1f7fd81a140bf5ac4ddf5",
+      "public_sha256": "5305301c7186d1c7a9cc2a8aac9b964a3d4cf492def1f7fd81a140bf5ac4ddf5",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/releases/l507-segmentation-v1.json",
+      "source_sha256": "2e5d450c1f9402d96990d912806603cb0a584afe76227df61ddec1cc4bacabde",
+      "public_sha256": "2e5d450c1f9402d96990d912806603cb0a584afe76227df61ddec1cc4bacabde",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_barranco_status.py",
+      "source_sha256": "50beaa8b7ad8ebf120f2b3a38ca784194412a5a172ec3d6c0d4d36f00f3f9798",
+      "public_sha256": "50beaa8b7ad8ebf120f2b3a38ca784194412a5a172ec3d6c0d4d36f00f3f9798",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_campaign_timings.py",
+      "source_sha256": "549d7232ca6a0d701953d63a05549738fd35505611a2072a2a1183c70c5218ed",
+      "public_sha256": "549d7232ca6a0d701953d63a05549738fd35505611a2072a2a1183c70c5218ed",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_controller.py",
+      "source_sha256": "a9e33640dbf7eae2eb53b6ff1575b62b7891d3317495ca2651ad14c2cd3b6a1d",
+      "public_sha256": "3fcc8f64a8c33786282a7d5d7e48b4b930b4a53e5eadc2a6dcfa43061d2becc2",
+      "sanitized": false,
+      "consolidation_adapted": true
+    },
+    {
+      "path": "lab-deploy/tests/test_cut020.py",
+      "source_sha256": "3507d1677427e26e8cec27cce7fd74d325436d32585775ddd26c424c39891ce8",
+      "public_sha256": "3507d1677427e26e8cec27cce7fd74d325436d32585775ddd26c424c39891ce8",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_glomap_review_worker.py",
+      "source_sha256": "b814371c4aae90a9eceecd121b2e0c31dc04049ba01dc4535356af7b9a1c8bcb",
+      "public_sha256": "b814371c4aae90a9eceecd121b2e0c31dc04049ba01dc4535356af7b9a1c8bcb",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_loop_vocab_worker.py",
+      "source_sha256": "88b8385b092c0cdc48b582edd00059de2353d8efa0d4a6542a868827dfe0a2d5",
+      "public_sha256": "88b8385b092c0cdc48b582edd00059de2353d8efa0d4a6542a868827dfe0a2d5",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_manager.py",
+      "source_sha256": "2a48e0de9ab517a7201ac7d4cac3488f61fbf492a1378c48c8d3df7094600cba",
+      "public_sha256": "2a48e0de9ab517a7201ac7d4cac3488f61fbf492a1378c48c8d3df7094600cba",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_mask_memory_patch.py",
+      "source_sha256": "af38b3cf967a14e6e9fd1fe9612dc67d8693e55e04fa15ed2c33ab8a7cb34667",
+      "public_sha256": "af38b3cf967a14e6e9fd1fe9612dc67d8693e55e04fa15ed2c33ab8a7cb34667",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_pnp019_diagnostic.py",
+      "source_sha256": "5b0816be9c9a6f5956d24186eb140e1ee60ff8c753fc5dedf074b9b2196677ca",
+      "public_sha256": "5b0816be9c9a6f5956d24186eb140e1ee60ff8c753fc5dedf074b9b2196677ca",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_reconstruction_campaign.py",
+      "source_sha256": "f34f9040fc9db2af5bbdf783291b98c326c8794886bb414c9a197ae1c9cf6dce",
+      "public_sha256": "f34f9040fc9db2af5bbdf783291b98c326c8794886bb414c9a197ae1c9cf6dce",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tests/test_rescue019_sim3_gate.py",
+      "source_sha256": "b94b6b0b15e5b10239ec5e3ee275d470f062a958495972718b53fd871ea12c5e",
+      "public_sha256": "b94b6b0b15e5b10239ec5e3ee275d470f062a958495972718b53fd871ea12c5e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/audit019_tracks_readonly.py",
+      "source_sha256": "fb152f84a28a4cee3c5b607bec972b894069d38c0f36fe5abe7a59e24832a92a",
+      "public_sha256": "fb152f84a28a4cee3c5b607bec972b894069d38c0f36fe5abe7a59e24832a92a",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/barranco_status.py",
+      "source_sha256": "417c37ca9d2a998cee7dc9a03473f90dea6f5e29a689696a28e0ea0bbf811e1d",
+      "public_sha256": "c4b4d25bb352431f2137a07f1209082e7f2f07059071486cbf0da2332ab21088",
+      "sanitized": true
+    },
+    {
+      "path": "lab-deploy/tools/campaign_post.py",
+      "source_sha256": "28669268d8152d750cb97f602b086563f352123ba29362116db13a1f5cc8ddda",
+      "public_sha256": "28669268d8152d750cb97f602b086563f352123ba29362116db13a1f5cc8ddda",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/campaign_power.py",
+      "source_sha256": "f7daef98000807b1507a642df9bddc25395267e295b772d7643662293c31d5fa",
+      "public_sha256": "f7daef98000807b1507a642df9bddc25395267e295b772d7643662293c31d5fa",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/check_alignment_identity.py",
+      "source_sha256": "67e181f4d3983edd963c41f7e2d0649b6c5ff87edd2290ff943af04df8f9c73f",
+      "public_sha256": "67e181f4d3983edd963c41f7e2d0649b6c5ff87edd2290ff943af04df8f9c73f",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/collect_reconstruction.py",
+      "source_sha256": "efc789f44623b46e6d1c963f91d7d88d74b5d7f010c3e3f354c2568c0a40a206",
+      "public_sha256": "efc789f44623b46e6d1c963f91d7d88d74b5d7f010c3e3f354c2568c0a40a206",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/cut020_steps.py",
+      "source_sha256": "9b1ac6882b69aa19d37ea2890ca2b4be25980bc57fd6e8b0510784dab6334428",
+      "public_sha256": "9b1ac6882b69aa19d37ea2890ca2b4be25980bc57fd6e8b0510784dab6334428",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/cut020_worker.py",
+      "source_sha256": "1290589ba24c05eca2a6c1de6fe5fd770eba3d5a849fe9c44a70833b1758e44f",
+      "public_sha256": "1290589ba24c05eca2a6c1de6fe5fd770eba3d5a849fe9c44a70833b1758e44f",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/dense_batches.py",
+      "source_sha256": "d4cf9af16c1238c94a15e40424ab6028029da06792f02b1406a1cb2f1145adbb",
+      "public_sha256": "d4cf9af16c1238c94a15e40424ab6028029da06792f02b1406a1cb2f1145adbb",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/drive_download_campaign.py",
+      "source_sha256": "5055f8e06502e0c0cedcc070ef81751e4cee2b6737073c8e350487a580b1d0ee",
+      "public_sha256": "5055f8e06502e0c0cedcc070ef81751e4cee2b6737073c8e350487a580b1d0ee",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/drive_download_worker.py",
+      "source_sha256": "135d6afb2bf4295acd177b7b2c14c04a8a81e0d64daf39eb81c0c2d2edd04acd",
+      "public_sha256": "135d6afb2bf4295acd177b7b2c14c04a8a81e0d64daf39eb81c0c2d2edd04acd",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/finish_barranco_report.py",
+      "source_sha256": "24c5ab20a3baae0fa15c10842f93516ac8f64be31b32255c2f7b4c2b015df36d",
+      "public_sha256": "24c5ab20a3baae0fa15c10842f93516ac8f64be31b32255c2f7b4c2b015df36d",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/focus_overview.py",
+      "source_sha256": "0082f23e6f63b2163a7479f0e77f6f9c17577eb52a2d8f1dcf5cffad90695af1",
+      "public_sha256": "0082f23e6f63b2163a7479f0e77f6f9c17577eb52a2d8f1dcf5cffad90695af1",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/glomap_review_worker.py",
+      "source_sha256": "e8ad7a3ef8021f2b3175e595327cf4d497007ada7777cb8e757be5424ff7ba5f",
+      "public_sha256": "e8ad7a3ef8021f2b3175e595327cf4d497007ada7777cb8e757be5424ff7ba5f",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/import_alignment_run.py",
+      "source_sha256": "92d2568641d590d5fa82c4cecb950f257a90ed67afc86a27e2e0d1be4688db4b",
+      "public_sha256": "92d2568641d590d5fa82c4cecb950f257a90ed67afc86a27e2e0d1be4688db4b",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/import_catalog.py",
+      "source_sha256": "59bd1849a85b1234451d32070e30ee355455758b2d4ef5df8a7f1af1eb303f9d",
+      "public_sha256": "59bd1849a85b1234451d32070e30ee355455758b2d4ef5df8a7f1af1eb303f9d",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/lifecycle_probe.py",
+      "source_sha256": "a5089a440fa7a410dfd41973cabd74f10d55a4a91ff569b8b606adff3c7c6f65",
+      "public_sha256": "a5089a440fa7a410dfd41973cabd74f10d55a4a91ff569b8b606adff3c7c6f65",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/local_alignment.py",
+      "source_sha256": "48397fa33725ed8dae660194d2696d54c6e4df4d74f38687391914761daa3e6e",
+      "public_sha256": "48397fa33725ed8dae660194d2696d54c6e4df4d74f38687391914761daa3e6e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/loop_vocab_worker.py",
+      "source_sha256": "6652de72221c75e58135fc919221b40979b812fc468bd83d39899c3b39272175",
+      "public_sha256": "6652de72221c75e58135fc919221b40979b812fc468bd83d39899c3b39272175",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/make_dense_preview.py",
+      "source_sha256": "7bab0a3850269dd3e07e0d91c5a14debb670bb52bfc8bb421072f5e2cbfcc35e",
+      "public_sha256": "7bab0a3850269dd3e07e0d91c5a14debb670bb52bfc8bb421072f5e2cbfcc35e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/park_memory_recovery.py",
+      "source_sha256": "2bb1bd06499cfe200683cea76468cef7db8671da3580b339822d04ecaf1c9aad",
+      "public_sha256": "2bb1bd06499cfe200683cea76468cef7db8671da3580b339822d04ecaf1c9aad",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/pnp019_diagnostic.py",
+      "source_sha256": "5fb6e16844a0c3e1a195c7799490e31cc826b063fe182f10c7e6922bb0c32220",
+      "public_sha256": "5fb6e16844a0c3e1a195c7799490e31cc826b063fe182f10c7e6922bb0c32220",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/prepare_drive_downloads.py",
+      "source_sha256": "3a980149c2ff1bdb93f40d181ff43bf39db09bdc2fcfcfec572a3081ecc99efc",
+      "public_sha256": "3a980149c2ff1bdb93f40d181ff43bf39db09bdc2fcfcfec572a3081ecc99efc",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/prepare_recovered007.py",
+      "source_sha256": "5946f5db358ad8962b58feb2d00db342911b91d6d5f93622d919802326bec38e",
+      "public_sha256": "5946f5db358ad8962b58feb2d00db342911b91d6d5f93622d919802326bec38e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/prepare_single006.py",
+      "source_sha256": "37a5cfae3197ed2613dfcdc3d8b139022289b2c2fc562681af23e51733f2d147",
+      "public_sha256": "37a5cfae3197ed2613dfcdc3d8b139022289b2c2fc562681af23e51733f2d147",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/reconnect006_worker.py",
+      "source_sha256": "fc424a2021aa932625f6d3475b56cfdd24806aa844271e25a851759dd299216a",
+      "public_sha256": "fc424a2021aa932625f6d3475b56cfdd24806aa844271e25a851759dd299216a",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/reconstruct_campaign.py",
+      "source_sha256": "a3a88d5b27f02bd2ed7e7e120a2a66cb812c89d2cec12920ce9d9505ab3a49fc",
+      "public_sha256": "a3a88d5b27f02bd2ed7e7e120a2a66cb812c89d2cec12920ce9d9505ab3a49fc",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/reconstruction_worker.py",
+      "source_sha256": "9b5bfd7206c6810f8d22386c2513a127ba07fd8d82658778a9e6f671186a057e",
+      "public_sha256": "9b5bfd7206c6810f8d22386c2513a127ba07fd8d82658778a9e6f671186a057e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/recover_component_model.py",
+      "source_sha256": "1a1f7ae1de2b46b0ec5f65f56c523855e078a07e57addabd455bf2effc46edee",
+      "public_sha256": "1a1f7ae1de2b46b0ec5f65f56c523855e078a07e57addabd455bf2effc46edee",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/report_campaign_timings.py",
+      "source_sha256": "3f85ac6c8af4c6dab495936d01e6d0ce6174b7edb4f2c19e822675315de93813",
+      "public_sha256": "3f85ac6c8af4c6dab495936d01e6d0ce6174b7edb4f2c19e822675315de93813",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/rescue019_sim3_gate.py",
+      "source_sha256": "3b5866e58d2901fc01332654537aebd5bc413e82ab5dc7cf9023ac9a306a1479",
+      "public_sha256": "3b5866e58d2901fc01332654537aebd5bc413e82ab5dc7cf9023ac9a306a1479",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/revalidate_covered_model.py",
+      "source_sha256": "0a3542f54d537978502f2179de97e4647e15f09d89bd7581d1cc7888ca6ed9b1",
+      "public_sha256": "0a3542f54d537978502f2179de97e4647e15f09d89bd7581d1cc7888ca6ed9b1",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/review_experiments.py",
+      "source_sha256": "5bb325b9388f62e14fa11dec351ae842aaf63ac97a3841c2480d937767fa954e",
+      "public_sha256": "5bb325b9388f62e14fa11dec351ae842aaf63ac97a3841c2480d937767fa954e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/run_reconstruction_campaign.py",
+      "source_sha256": "7af5ddee07fe5d4b3e7482adb29ba5d340f2da8a24243ae7fb4d5b8c2b8b5b13",
+      "public_sha256": "7af5ddee07fe5d4b3e7482adb29ba5d340f2da8a24243ae7fb4d5b8c2b8b5b13",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/source_cycle_probe.py",
+      "source_sha256": "29cfca9c8521e7ccdb22125adf45c83c2629e603e641b5413e852af3675c100b",
+      "public_sha256": "29cfca9c8521e7ccdb22125adf45c83c2629e603e641b5413e852af3675c100b",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/sparse_loop_overlay.py",
+      "source_sha256": "01a1622a24b05f6f3ac6980a599ba09b92a02619505bb3a41efaa6dad083a47e",
+      "public_sha256": "01a1622a24b05f6f3ac6980a599ba09b92a02619505bb3a41efaa6dad083a47e",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/sparse_nomasks_worker.py",
+      "source_sha256": "9ce1a4e0fbc5e25312809226059985f8a6f690d2a00887ff5ab2978327301556",
+      "public_sha256": "9ce1a4e0fbc5e25312809226059985f8a6f690d2a00887ff5ab2978327301556",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/sparse_review_worker.py",
+      "source_sha256": "980b1bcfbeb68137d588e63337780d86c7c1820ec87f2b70d5aa1529b6aa065f",
+      "public_sha256": "980b1bcfbeb68137d588e63337780d86c7c1820ec87f2b70d5aa1529b6aa065f",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/start_horizontal006.py",
+      "source_sha256": "e9742bd293b836c00cdba5de4b877d17e83e14a5969e54c5f929bd2abb7c9219",
+      "public_sha256": "e9742bd293b836c00cdba5de4b877d17e83e14a5969e54c5f929bd2abb7c9219",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/start_reconnect006.py",
+      "source_sha256": "a1970fd88a78d32e6977c1bbe16c6a0224397f38b257a0df5fb478dabd02fd2d",
+      "public_sha256": "a1970fd88a78d32e6977c1bbe16c6a0224397f38b257a0df5fb478dabd02fd2d",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/start_review_experiments.py",
+      "source_sha256": "289cf6c4c6d27cc00a5c3deab5d48e50c0de968ed1c46f7b27619fc84f7cd4a9",
+      "public_sha256": "289cf6c4c6d27cc00a5c3deab5d48e50c0de968ed1c46f7b27619fc84f7cd4a9",
+      "sanitized": false
+    },
+    {
+      "path": "lab-deploy/tools/test_package.py",
+      "source_sha256": "9c396de358160f7b41b4b4a85cc3d7dde89fc7567c709d4bc786c7de1f6057ba",
+      "public_sha256": "9c396de358160f7b41b4b4a85cc3d7dde89fc7567c709d4bc786c7de1f6057ba",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/.gitignore",
+      "source_sha256": "7aa723b4eb4b3fa4efcba2a0d794028f8c01f2e897f7ef345a8c8ae645a35a73",
+      "public_sha256": "7aa723b4eb4b3fa4efcba2a0d794028f8c01f2e897f7ef345a8c8ae645a35a73",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/MESH-CAMPAIGN-20261112.md",
+      "source_sha256": "4ce8ea2484db4864b8803c23021a0f7f874e03fc6d0e5b040c5cb2e2aa6bac9a",
+      "public_sha256": "4ce8ea2484db4864b8803c23021a0f7f874e03fc6d0e5b040c5cb2e2aa6bac9a",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/PILOT-025.md",
+      "source_sha256": "6082f8a3cd5f4fb572fa200ae7f5e3d3ff5b4bb1218c12e94d8a507012b3cd60",
+      "public_sha256": "6082f8a3cd5f4fb572fa200ae7f5e3d3ff5b4bb1218c12e94d8a507012b3cd60",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/README.md",
+      "source_sha256": "30e08e3cb0e1f8a76ae7025fd5cae248b9874d061cd1e57e2cfe08a31b11e19e",
+      "public_sha256": "30e08e3cb0e1f8a76ae7025fd5cae248b9874d061cd1e57e2cfe08a31b11e19e",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/SIMPLIFIED.md",
+      "source_sha256": "c05a54d04b5db68464a2d19b3ce5cc751a8321cf629e32cb0f3703c013215454",
+      "public_sha256": "c05a54d04b5db68464a2d19b3ce5cc751a8321cf629e32cb0f3703c013215454",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/alignment_worker.py",
+      "source_sha256": "9941cd61cb06ac93c74788a6c3cd1f37098af088d8bc5013f778ac20529a0174",
+      "public_sha256": "9941cd61cb06ac93c74788a6c3cd1f37098af088d8bc5013f778ac20529a0174",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/app.py",
+      "source_sha256": "acb8c54b79839155e78d7142bc41e10e8a20fcac269d8400fd1c32a0a9c6069a",
+      "public_sha256": "acb8c54b79839155e78d7142bc41e10e8a20fcac269d8400fd1c32a0a9c6069a",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/batch_simplify_70.py",
+      "source_sha256": "f3028ac0c14b53d267a005149fee0135fd449adb1a0c116df44623d9630a6938",
+      "public_sha256": "f3028ac0c14b53d267a005149fee0135fd449adb1a0c116df44623d9630a6938",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/blender_blocks.py",
+      "source_sha256": "bbe33a250f5a6230a2e37744a50231eccd23b5222b6bafc64a5c416e9095e779",
+      "public_sha256": "bbe33a250f5a6230a2e37744a50231eccd23b5222b6bafc64a5c416e9095e779",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/cleanup_central.py",
+      "source_sha256": "a843598fbfff01936c45d1a3fa9b3cd1d5e2f81816d13f585b64b2607d876197",
+      "public_sha256": "a843598fbfff01936c45d1a3fa9b3cd1d5e2f81816d13f585b64b2607d876197",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/combine_meshes.py",
+      "source_sha256": "7705a84e20ed75c34b39157de985fa0d6ddb03271b0da9f620277fd50130ee67",
+      "public_sha256": "7705a84e20ed75c34b39157de985fa0d6ddb03271b0da9f620277fd50130ee67",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/mesh_campaign.py",
+      "source_sha256": "4127f244fe59dde4d1db830c4ddb9d0034e8a8d19d7410c36a0f4410d874ab68",
+      "public_sha256": "4127f244fe59dde4d1db830c4ddb9d0034e8a8d19d7410c36a0f4410d874ab68",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/mesh_worker.py",
+      "source_sha256": "c870730710148baa9a956c24707e2575518b70edb466665e8cfd6bbe7a4ccfe2",
+      "public_sha256": "c870730710148baa9a956c24707e2575518b70edb466665e8cfd6bbe7a4ccfe2",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/package_simplified_blocks.py",
+      "source_sha256": "c0e1211a4e1829bc524128f43209b38837a2d5754e6fc36269820e25ac64998b",
+      "public_sha256": "c0e1211a4e1829bc524128f43209b38837a2d5754e6fc36269820e25ac64998b",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/pilot.py",
+      "source_sha256": "13fdcdd7533bac7f32a5d102baabf9ead8d816394784c0bbb674e8b9873a24a0",
+      "public_sha256": "13fdcdd7533bac7f32a5d102baabf9ead8d816394784c0bbb674e8b9873a24a0",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/pilot_finish.py",
+      "source_sha256": "f53f133d063a6ad050a2b279568052a229fd558899feaa113773ac8641170327",
+      "public_sha256": "f53f133d063a6ad050a2b279568052a229fd558899feaa113773ac8641170327",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/pilot_gallery.py",
+      "source_sha256": "778cd9ca846bc6270356bc6503bbe9bf51f42ae6cff0617019facb4fd32e1ee4",
+      "public_sha256": "778cd9ca846bc6270356bc6503bbe9bf51f42ae6cff0617019facb4fd32e1ee4",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/pilot_remote.py",
+      "source_sha256": "460a17c18ef9f85e034ccdcbcaac55dd68b2fde424539f9636023feba0b318b9",
+      "public_sha256": "167d817b2647291bb17bb469b37a7e7b7c19bb13b6b39e9ca46d68786c0940bd",
+      "sanitized": true
+    },
+    {
+      "path": "home/barranco-roi/preserve_active.py",
+      "source_sha256": "79f29ef31dd355d12996200912a76ee1dc1af5fec5e199c1ee041de24c2689e1",
+      "public_sha256": "79f29ef31dd355d12996200912a76ee1dc1af5fec5e199c1ee041de24c2689e1",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/preview_simplification.py",
+      "source_sha256": "15ed83f8a3b898394c715efd1110b0772c44b443e0d8241189fdaa7fc725cf93",
+      "public_sha256": "15ed83f8a3b898394c715efd1110b0772c44b443e0d8241189fdaa7fc725cf93",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/__init__.py",
+      "source_sha256": "0617bd9b0ed30275c5da5c56f74a718a2307b6c1dcdd9dc686c47fd658a63dd7",
+      "public_sha256": "0617bd9b0ed30275c5da5c56f74a718a2307b6c1dcdd9dc686c47fd658a63dd7",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/alignment.py",
+      "source_sha256": "def261a0e4da337fa33c9b9fc6664e93a7ecf24fbd20dac7d6ecb8ca8f3bf7f2",
+      "public_sha256": "def261a0e4da337fa33c9b9fc6664e93a7ecf24fbd20dac7d6ecb8ca8f3bf7f2",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/catalog.py",
+      "source_sha256": "8f86925e23e24afe66af502eb82ed3cd8adc3b929764ab53f1003d7f10fb8212",
+      "public_sha256": "8f86925e23e24afe66af502eb82ed3cd8adc3b929764ab53f1003d7f10fb8212",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/core.py",
+      "source_sha256": "d9762060ee81049ffd547c10b7cec276416133bd4e62c81a3e8b17484435afee",
+      "public_sha256": "d9762060ee81049ffd547c10b7cec276416133bd4e62c81a3e8b17484435afee",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/multi.py",
+      "source_sha256": "42abfe8a6155435b7913f150a5cdfd50508173c87e3ab7b64e54bd0c708cfdce",
+      "public_sha256": "42abfe8a6155435b7913f150a5cdfd50508173c87e3ab7b64e54bd0c708cfdce",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/mvs_interface.py",
+      "source_sha256": "c387f06e944415d123b7401121a14a3a067d48d220cedf293f63e1d551cda99e",
+      "public_sha256": "c387f06e944415d123b7401121a14a3a067d48d220cedf293f63e1d551cda99e",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/service.py",
+      "source_sha256": "e092982faf191bbafd8d9830b232e59e7a6ef88a5963ae2b8ddab1c1c478f2f4",
+      "public_sha256": "e092982faf191bbafd8d9830b232e59e7a6ef88a5963ae2b8ddab1c1c478f2f4",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/simplify_meshes.py",
+      "source_sha256": "68690180966ccdc35e22ec1a3a5c6a22d939f18bbf7b7a6e4db08e11773edd3a",
+      "public_sha256": "68690180966ccdc35e22ec1a3a5c6a22d939f18bbf7b7a6e4db08e11773edd3a",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/source_fetch.py",
+      "source_sha256": "1deac7588aa17952539ebb646c02e7daad01b327c2d8631e1d472578a40d6848",
+      "public_sha256": "1deac7588aa17952539ebb646c02e7daad01b327c2d8631e1d472578a40d6848",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/alignment_browser_check.py",
+      "source_sha256": "ec6ddef5574743d2c492ca468e5132f1f8c6e983adf03072e0aebe5a98eeca65",
+      "public_sha256": "ec6ddef5574743d2c492ca468e5132f1f8c6e983adf03072e0aebe5a98eeca65",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/browser_check.py",
+      "source_sha256": "bc77558081065d036317d2cfeae54eaa0cfc9ca0dfb89bdc774337549d703f4e",
+      "public_sha256": "bc77558081065d036317d2cfeae54eaa0cfc9ca0dfb89bdc774337549d703f4e",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/pilot_browser_check.py",
+      "source_sha256": "9d22d6dc6f12704e178299ddb441e31772ae0e62527fff84eb680562c2ab552b",
+      "public_sha256": "9d22d6dc6f12704e178299ddb441e31772ae0e62527fff84eb680562c2ab552b",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_alignment.py",
+      "source_sha256": "e1b1eb39ece8f081c3ed8b91e98eff65889baa719c46c3a72b7d9f609b2ab4c1",
+      "public_sha256": "e1b1eb39ece8f081c3ed8b91e98eff65889baa719c46c3a72b7d9f609b2ab4c1",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_block_delivery.py",
+      "source_sha256": "7da91db5276e2a91cfc924d4f0e090ef326b1b5fd9f39ceab23a26ef823879e8",
+      "public_sha256": "7da91db5276e2a91cfc924d4f0e090ef326b1b5fd9f39ceab23a26ef823879e8",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_core.py",
+      "source_sha256": "e835be0cdc8fc31e7ecc88f282e85477c0faed9759908b781790fc16c5f18c93",
+      "public_sha256": "e835be0cdc8fc31e7ecc88f282e85477c0faed9759908b781790fc16c5f18c93",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_http.py",
+      "source_sha256": "e3c6e520a8787e3fa52e7934ad05a9e2d21299e4efe6d598cea9b01c62e6df0b",
+      "public_sha256": "e3c6e520a8787e3fa52e7934ad05a9e2d21299e4efe6d598cea9b01c62e6df0b",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_mesh_campaign.py",
+      "source_sha256": "0efd7345032879db7e3e73bde88f4200c382f6a58833055f51067a20833d45a4",
+      "public_sha256": "0efd7345032879db7e3e73bde88f4200c382f6a58833055f51067a20833d45a4",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_multi.py",
+      "source_sha256": "7a9d696c3b5c4a7bf3cc4f35e7458b9bdca895d2133fd18c5f6e6e4fa949578c",
+      "public_sha256": "7a9d696c3b5c4a7bf3cc4f35e7458b9bdca895d2133fd18c5f6e6e4fa949578c",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_pilot.py",
+      "source_sha256": "2046dc02981b94cad26c3572afad7876414f29970e80e5b46a0f58e73a5aa220",
+      "public_sha256": "2046dc02981b94cad26c3572afad7876414f29970e80e5b46a0f58e73a5aa220",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/tests/test_simplify.py",
+      "source_sha256": "b863b8f6d9b80f6a5c40a054a57a29fd5d8686e6c0a603a2cc6c9e6aaf6f1cb0",
+      "public_sha256": "b863b8f6d9b80f6a5c40a054a57a29fd5d8686e6c0a603a2cc6c9e6aaf6f1cb0",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/align.css",
+      "source_sha256": "096c6ecbfaffe59a299351c0d732ba696bc322bb60ff5d8221c2de152e41450d",
+      "public_sha256": "096c6ecbfaffe59a299351c0d732ba696bc322bb60ff5d8221c2de152e41450d",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/align.js",
+      "source_sha256": "d8fa15d5c79a787335af1ff65e74f4aefd112225a3729961c9745b2eab1ad9ff",
+      "public_sha256": "d8fa15d5c79a787335af1ff65e74f4aefd112225a3729961c9745b2eab1ad9ff",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/app.js",
+      "source_sha256": "bacc743529b778c0b2eac275b7ddf9904d1cfa4dffceea1a4e46592353bec44a",
+      "public_sha256": "bacc743529b778c0b2eac275b7ddf9904d1cfa4dffceea1a4e46592353bec44a",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/cloud-cache.js",
+      "source_sha256": "99c2beff45843768da5a533a884134651cc855c9e79cdeea1dbe08dd2670745b",
+      "public_sha256": "99c2beff45843768da5a533a884134651cc855c9e79cdeea1dbe08dd2670745b",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/cloud-renderer.js",
+      "source_sha256": "c795e73006bf0ae760f129663d1cbd45021652d862d08b3803e1771ae77ccc71",
+      "public_sha256": "c795e73006bf0ae760f129663d1cbd45021652d862d08b3803e1771ae77ccc71",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/index.html",
+      "source_sha256": "c6af67a5b58943fc38cd7a93acd1788fc6a9effd63d4280bb853aac8f352ec79",
+      "public_sha256": "c6af67a5b58943fc38cd7a93acd1788fc6a9effd63d4280bb853aac8f352ec79",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/multi.css",
+      "source_sha256": "f16a076375e814b60fcb38de21eae592dab94d9f570ee8c71836ffd1ae419cd4",
+      "public_sha256": "f16a076375e814b60fcb38de21eae592dab94d9f570ee8c71836ffd1ae419cd4",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/style.css",
+      "source_sha256": "ed4539508454c4cecacafb085999015cb9829512aba76836e7072782ed837af1",
+      "public_sha256": "ed4539508454c4cecacafb085999015cb9829512aba76836e7072782ed837af1",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/README.md",
+      "source_sha256": "463267a093c013637cd43fa661f34e6a0529884188abb7869a89fc99479b8020",
+      "public_sha256": "463267a093c013637cd43fa661f34e6a0529884188abb7869a89fc99479b8020",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/app.py",
+      "source_sha256": "a4c10788b60b7abc4f58b63e673632d234c15134bf2d22e6fe5543e75e3f05bc",
+      "public_sha256": "a4c10788b60b7abc4f58b63e673632d234c15134bf2d22e6fe5543e75e3f05bc",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/browser_selection_check.py",
+      "source_sha256": "8bc6b4c3262adcae0f99cc72b10d1c32b906dbe2723f7ce989c683d47fb79f11",
+      "public_sha256": "8bc6b4c3262adcae0f99cc72b10d1c32b906dbe2723f7ce989c683d47fb79f11",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/catalog_app.py",
+      "source_sha256": "0cb860d7cb943443e485ea6375bddc4e2eba9ecc535eab9973245b907fdf6637",
+      "public_sha256": "0cb860d7cb943443e485ea6375bddc4e2eba9ecc535eab9973245b907fdf6637",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/index.html",
+      "source_sha256": "7b4ebc0f4d60d4cb308b5622b348dc0898f4c98143edda4e9573bf33c494ae68",
+      "public_sha256": "7b4ebc0f4d60d4cb308b5622b348dc0898f4c98143edda4e9573bf33c494ae68",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/test_app.py",
+      "source_sha256": "afb472a7a4d1a5368bf0a45769fb7609154a504c47beb43e2a947d03db97fe00",
+      "public_sha256": "afb472a7a4d1a5368bf0a45769fb7609154a504c47beb43e2a947d03db97fe00",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/test_catalog.py",
+      "source_sha256": "1264a0a2a4a6abab6f6f0d69bbd9ac30f0011f9fcd5dc27801d6b35a30c97255",
+      "public_sha256": "1264a0a2a4a6abab6f6f0d69bbd9ac30f0011f9fcd5dc27801d6b35a30c97255",
+      "sanitized": false
+    },
+    {
+      "path": "docs/operator-skill/l507-readonly/SKILL.md",
+      "source_sha256": "c24e9f30cbba654b86dec51129fe03b165a87f8a28f51f061a83ee85e2a14009",
+      "public_sha256": "4d6514993b46aff51204cc989939ce09f68be4317376ffd85c6ebf4eb340b0a1",
+      "sanitized": true
+    },
+    {
+      "path": "docs/operator-skill/l507-readonly/references/context.md",
+      "source_sha256": "ad92a0072244edbc8ea65c607d9795de510eafd7a1e894476e0a33407a880a51",
+      "public_sha256": "8df19bee190c4042e59498d76b626d97e3c7deceab8e1e1c8dc866871e822d66",
+      "sanitized": true
+    },
+    {
+      "path": "home/DECISIONES-MALLA-BARRANCO.md",
+      "source_sha256": "fde85f5260fd3f90d8d6cd530fb67f76c11263cd32c6af7ed5f116e6f49394c9",
+      "public_sha256": "fde85f5260fd3f90d8d6cd530fb67f76c11263cd32c6af7ed5f116e6f49394c9",
+      "sanitized": false
+    },
+    {
+      "path": "home/OPERACION-20261115.md",
+      "source_sha256": "9b9055016a4979b810d5f9d82745654a7e8b342ce2a7d3f7631ab6e2490d5e4d",
+      "public_sha256": "32d96c986e1cc9a76fb13ef0883a74bb0abea3bbd33d898062f69b65693bdf4b",
+      "sanitized": true
+    },
+    {
+      "path": "home/OPERACION-20261116-PREFLIGHT-DESCARGAS.md",
+      "source_sha256": "ca85c6af087d233076c6790545909659acba148abf27f57d3b2ef07642ecdc2b",
+      "public_sha256": "a150a2afa870854b9969538ae4f0ae02cc49a130f2bb2098a78550a9b0de314d",
+      "sanitized": true
+    },
+    {
+      "path": "home/opencode-historial-20261114.md",
+      "source_sha256": "9c571ae2fa0b65d95f51a854083f03b6bb8596420efade2d03083abd91716baf",
+      "public_sha256": "9c571ae2fa0b65d95f51a854083f03b6bb8596420efade2d03083abd91716baf",
+      "sanitized": false
+    },
+    {
+      "path": "home/opencode-historial-20261116-antes-relevo-095346.md",
+      "source_sha256": "a6f8a7e3269ac7ccec841051e7a89e114aea62a07feb8bb58434340de10fd836",
+      "public_sha256": "ad68927c5817821e1ebb182302b6623479b17f013ac8253e66857f5b1b3f6fe8",
+      "sanitized": true
+    },
+    {
+      "path": "home/opencode-historial-previo-20261112.md",
+      "source_sha256": "be81b51bc85d900612ed87560c0c6c9a208c97d5772f742c1e34a674c023472c",
+      "public_sha256": "be81b51bc85d900612ed87560c0c6c9a208c97d5772f742c1e34a674c023472c",
+      "sanitized": false
+    },
+    {
+      "path": "home/opencode.md",
+      "source_sha256": "b511ca7f72af80c8c5ab1bab4d08b01686ce61299a4b73a9356606ba3ef58de9",
+      "public_sha256": "99b1782e19ff5d93678e5cb4e8d478ef7274f70bfd8255cd563c3c42d675a798",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/aplicar.sh",
+      "source_sha256": "c2c57a925ef54edc71bb23fb717343539acc7511fa54ac0c605305fc7fb81218",
+      "public_sha256": "c2c57a925ef54edc71bb23fb717343539acc7511fa54ac0c605305fc7fb81218",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/deep.sh",
+      "source_sha256": "f213e0244f873988315beb26dbe295ae17737dbad3a3c3d92026599df6383913",
+      "public_sha256": "f213e0244f873988315beb26dbe295ae17737dbad3a3c3d92026599df6383913",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/dense_batches.py",
+      "source_sha256": "4b32e16507bbaeaf16a68b9c471c77cb8857c2b76639066edd5597357b054f77",
+      "public_sha256": "4b32e16507bbaeaf16a68b9c471c77cb8857c2b76639066edd5597357b054f77",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/export_aligned.py",
+      "source_sha256": "d5068b6c231afa40d5526e2534d53efdc6867a2f69212b60029b2f04dd6886c2",
+      "public_sha256": "d5068b6c231afa40d5526e2534d53efdc6867a2f69212b60029b2f04dd6886c2",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/inv.sh",
+      "source_sha256": "86e95d5541dbfb7c3b22ddbfd908efe69ae5f099f3ecc72f4260db54e0a6a4c9",
+      "public_sha256": "86e95d5541dbfb7c3b22ddbfd908efe69ae5f099f3ecc72f4260db54e0a6a4c9",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/netcheck.sh",
+      "source_sha256": "d43bb3cc693dd9a38921f2eb6da18458b15901654bbe055bcd30e8bda0397e0d",
+      "public_sha256": "3d4eadc7abf3971d1c7ec8109b08e2fec1a5ae06709df1a26c497f68c277787d",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/opencode-link.sh",
+      "source_sha256": "a14b2adf34d41d6e03d2fbeace3ce98897c6a45b69985846bba78ec5f73b559e",
+      "public_sha256": "27d6dba9e567e3ef1c0dbbe062785ac6accd7cef705777920116788958e8a192",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/phone_worker.py",
+      "source_sha256": "aee23e055f91e7b8b1a967349ae07665aa8acbe1c438c1fdc72c1a1562727380",
+      "public_sha256": "aee23e055f91e7b8b1a967349ae07665aa8acbe1c438c1fdc72c1a1562727380",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/reconstruction_worker.py",
+      "source_sha256": "32bf7271669028868bb3c43b8036995f85baf10501b17e53400ae6051b732de0",
+      "public_sha256": "32bf7271669028868bb3c43b8036995f85baf10501b17e53400ae6051b732de0",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/relaunch.sh",
+      "source_sha256": "0a295735f33f52fe771009dbf76ac337dd74fa5900a51afe62945675beac2d44",
+      "public_sha256": "0a295735f33f52fe771009dbf76ac337dd74fa5900a51afe62945675beac2d44",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/rm_child.sh",
+      "source_sha256": "9ded356beb496c814c82e417cdba6eb5848410be76c0f03ea7fb900dc4a4913c",
+      "public_sha256": "9ded356beb496c814c82e417cdba6eb5848410be76c0f03ea7fb900dc4a4913c",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/setup_m3.py",
+      "source_sha256": "6ba9026890a49298e5d1d5ddce23bd6c8eff4224dcda1372ba41cfd08081c9de",
+      "public_sha256": "e80cc336af2ec3ffe7ab5f55997292e7809bfeddc2baa4c86353dc941c6f67a4",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/setup_phone.py",
+      "source_sha256": "b842b1e65b76d9bb874e4f302ecb3f7329a9ca7c1a1eae8705b443ea6dbc9bbf",
+      "public_sha256": "5630c03f4fc60c9d90c4d89ae8fbe408a811d1aa3c4cb70f5e7654af95d0c7bc",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/status.sh",
+      "source_sha256": "c1e9489317709777342876f6caf6e01a804e371fff065ccfcd34a1f065e01464",
+      "public_sha256": "c1e9489317709777342876f6caf6e01a804e371fff065ccfcd34a1f065e01464",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/status_m3.sh",
+      "source_sha256": "6f2dee29005d8aeded8a44c85db3b49cf9e1fd7df2280348dbf453f98dbea503",
+      "public_sha256": "201ed5118b7bb82bb39888f6f9545f0fe37e9075526c185fa18f62820890a1e2",
+      "sanitized": true
+    },
+    {
+      "path": "phone-run/t001.sh",
+      "source_sha256": "362152f1114a4a84223e743099d8ae760bf1c0f1ceff06ed2b06bfb74b9638bd",
+      "public_sha256": "362152f1114a4a84223e743099d8ae760bf1c0f1ceff06ed2b06bfb74b9638bd",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/times.sh",
+      "source_sha256": "a263971cfeb5f379b8b6803dd6fe0f4f02dbd5aba7f8c93ced12518dfec16f4b",
+      "public_sha256": "a263971cfeb5f379b8b6803dd6fe0f4f02dbd5aba7f8c93ced12518dfec16f4b",
+      "sanitized": false
+    },
+    {
+      "path": "phone-run/watch010.sh",
+      "source_sha256": "4e47b311523b20bf6c1c3817d41a226862b46ddcb247783615374690a3f12e3b",
+      "public_sha256": "a5c68bdbbdc19cabb2465ba614ed39e0a2d5c8b76c724da0790362dff2c458e9",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_007_more_space.py",
+      "source_sha256": "717f63a7fb87f90dfa524b5ae9368b99fdc803209f9cb3949a1754b352a414b5",
+      "public_sha256": "717f63a7fb87f90dfa524b5ae9368b99fdc803209f9cb3949a1754b352a414b5",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_019_cut_inspect.py",
+      "source_sha256": "d9da4ee477a1f1a1a9025e43d3a92d05bc6cd43b13d989a82b8e0ff4696cf813",
+      "public_sha256": "d9da4ee477a1f1a1a9025e43d3a92d05bc6cd43b13d989a82b8e0ff4696cf813",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_020_cut_inspect.py",
+      "source_sha256": "ef72e6a652217f5c0de768bd1723ff42153a16848c539183170852146b7930b2",
+      "public_sha256": "ef72e6a652217f5c0de768bd1723ff42153a16848c539183170852146b7930b2",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_admin_transport.py",
+      "source_sha256": "34048da736d143c99f085225f1e095c984d6b96b6d9efcabd01f6f9d1dfcd8c0",
+      "public_sha256": "34048da736d143c99f085225f1e095c984d6b96b6d9efcabd01f6f9d1dfcd8c0",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_apply_100w.py",
+      "source_sha256": "8900598fe7d75a3c5de9c36639ecc00fb9bf153d96739c16ca9c4c20782ff3e1",
+      "public_sha256": "8900598fe7d75a3c5de9c36639ecc00fb9bf153d96739c16ca9c4c20782ff3e1",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_cache_cleanup.py",
+      "source_sha256": "e5802dfc7a659c002c0f2a0442972761c0774b7f30febb906cb6d10568aa8846",
+      "public_sha256": "e5802dfc7a659c002c0f2a0442972761c0774b7f30febb906cb6d10568aa8846",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_clean_inspect.py",
+      "source_sha256": "3168a72811f8db32bf6204024e951b57d0549bca4ef56be7781226f2cb3e8f09",
+      "public_sha256": "3168a72811f8db32bf6204024e951b57d0549bca4ef56be7781226f2cb3e8f09",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_collect_020_021.py",
+      "source_sha256": "3bee709ec779cb7cdd265e2d42502bd95e9cb8e9918fa6f05d0ceeea20b26043",
+      "public_sha256": "e966e77617e89a35016674162a0394e4df0b6020cdd8f0f813a29d9d3f4a7cbd",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_download_status.py",
+      "source_sha256": "4ef4f519b1f7b19d2089e4949725f9beaaa0ce0186cfd765c0e43649e32c079b",
+      "public_sha256": "4ef4f519b1f7b19d2089e4949725f9beaaa0ce0186cfd765c0e43649e32c079b",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_home_inspect.py",
+      "source_sha256": "92e8bb668b9981d3cb0aeab7f47cdb5478c4b5c10ce3d87786a250278ac44be0",
+      "public_sha256": "92e8bb668b9981d3cb0aeab7f47cdb5478c4b5c10ce3d87786a250278ac44be0",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_inspect006_readonly.py",
+      "source_sha256": "5265071f9d69be1c1cb2bdd69895fb2e816dbeb32b0737ed844e2ce950442fe8",
+      "public_sha256": "5265071f9d69be1c1cb2bdd69895fb2e816dbeb32b0737ed844e2ce950442fe8",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_inspect_horizontal.py",
+      "source_sha256": "2b58f75c0b55c0536de39a56e1b69338a254dee8f4bd8b7713fcab2db026133f",
+      "public_sha256": "2b58f75c0b55c0536de39a56e1b69338a254dee8f4bd8b7713fcab2db026133f",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_inspect_sfm.py",
+      "source_sha256": "bb6e89beff9c42c5c3de0bc9ae7d6c9a00c0f1e41b45eeba26dab876f04e32aa",
+      "public_sha256": "bb6e89beff9c42c5c3de0bc9ae7d6c9a00c0f1e41b45eeba26dab876f04e32aa",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_mask_path.py",
+      "source_sha256": "91798123ffab3b7133705273081b8feca65acefb04bb2893c47ebb90b97628aa",
+      "public_sha256": "91798123ffab3b7133705273081b8feca65acefb04bb2893c47ebb90b97628aa",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_mask_resume_inspect.py",
+      "source_sha256": "11ca9a95dca54af79c1d307c066ea8c0bd339ae5884195da3a53142535a56894",
+      "public_sha256": "11ca9a95dca54af79c1d307c066ea8c0bd339ae5884195da3a53142535a56894",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_next_inspect.py",
+      "source_sha256": "fed66062b565899dc0998554b774c903375094a344d36974bfcfc5437df888cb",
+      "public_sha256": "fed66062b565899dc0998554b774c903375094a344d36974bfcfc5437df888cb",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_prepare_running_downloads.py",
+      "source_sha256": "e2df48dbbc7c96f1058c0d0a26bbe776650cc0bc563acfddda07d7840be1989f",
+      "public_sha256": "0e8af43b0bbd5d982b1af6b6de234186649610c8b65b6d27184a9540093da878",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_prepare_terrestrial.py",
+      "source_sha256": "7ec906a8f488d4dee5d994d4b8a4a395e11ce95d2d12491270fb6baff09832a1",
+      "public_sha256": "7ec906a8f488d4dee5d994d4b8a4a395e11ce95d2d12491270fb6baff09832a1",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_repair.py",
+      "source_sha256": "7a6a42d44c19dfbbe8496e0bab2057f2fe30596e36c04d0809e872a3e9342ae5",
+      "public_sha256": "7a6a42d44c19dfbbe8496e0bab2057f2fe30596e36c04d0809e872a3e9342ae5",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_resume_100w.py",
+      "source_sha256": "3a18c140dbb05468581403d6348ea0bab149041c4df5771e46a6847c963ae603",
+      "public_sha256": "3a18c140dbb05468581403d6348ea0bab149041c4df5771e46a6847c963ae603",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_resume_cut020_exdev.py",
+      "source_sha256": "9774341b40e466bc3c71b17a4533c293e8bd196e48312f7d270adbd5185ea8c3",
+      "public_sha256": "9774341b40e466bc3c71b17a4533c293e8bd196e48312f7d270adbd5185ea8c3",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_resume_horizontal_100w.py",
+      "source_sha256": "71d5cdea32e07afb53479ece6980792be69d1561365a9bef9c6e06099a01d4a7",
+      "public_sha256": "71d5cdea32e07afb53479ece6980792be69d1561365a9bef9c6e06099a01d4a7",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_runtime_check.py",
+      "source_sha256": "c47b8fcdc0254889a54e42800f1f3f8a1f69ad97aaba50268d6f70e6d1996007",
+      "public_sha256": "c47b8fcdc0254889a54e42800f1f3f8a1f69ad97aaba50268d6f70e6d1996007",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_service_diagnostics.py",
+      "source_sha256": "2119d0ef47450fc864265dea4c5d5661f62c72178c215ae859c77a3450d489e2",
+      "public_sha256": "2119d0ef47450fc864265dea4c5d5661f62c72178c215ae859c77a3450d489e2",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_sparse_manifest.py",
+      "source_sha256": "c1150995b04599506458b4bd3f43b5c6512de3214d85cfc28a0be62645b5f736",
+      "public_sha256": "c1150995b04599506458b4bd3f43b5c6512de3214d85cfc28a0be62645b5f736",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_sparse_status.py",
+      "source_sha256": "de9003a821d83c53f3343020ca3bb629106e99437f6d0010cabe7f92911f098a",
+      "public_sha256": "de9003a821d83c53f3343020ca3bb629106e99437f6d0010cabe7f92911f098a",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_start_cut020.py",
+      "source_sha256": "41dfa93751859a6fe0a49e80517bbb7c6a1974d1c71a4ec7cc67d89515b6d2f4",
+      "public_sha256": "41dfa93751859a6fe0a49e80517bbb7c6a1974d1c71a4ec7cc67d89515b6d2f4",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_start_downloads.py",
+      "source_sha256": "5c5d7409453705013c21490e96d697a1553bda527d6de1624838b73679f7c105",
+      "public_sha256": "5c5d7409453705013c21490e96d697a1553bda527d6de1624838b73679f7c105",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_start_horizontal_nomasks.py",
+      "source_sha256": "a006d4db90022b785824109ec29ce24bb5c876b2fd97152af2199b3f7645531f",
+      "public_sha256": "a006d4db90022b785824109ec29ce24bb5c876b2fd97152af2199b3f7645531f",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/barranco_start_sparse.py",
+      "source_sha256": "7e4b1045ceca43aadcfbe231f47fa3fe5582241ab0cfe74b622d468723b3a76a",
+      "public_sha256": "7e4b1045ceca43aadcfbe231f47fa3fe5582241ab0cfe74b622d468723b3a76a",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/collect_all_sparse_review.py",
+      "source_sha256": "1bebaa2188b6a24ac3bc1fcd01d6909b386f6fcf14b1339c2247125a5baa12bf",
+      "public_sha256": "3da99cc4999c039998cb44d0735710f6c33e79ef7c01cbebbdb1d0c5988b6a19",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/collect_cut020_review.py",
+      "source_sha256": "7995f74575bf70c5e5b27cd48d1f47b93047c5302ecaa4ee948acccb2ae13ab3",
+      "public_sha256": "d765c2d8d6cecdfca7eb7ddad0a69bb96b9390a4aecabcadb2d981fd03215032",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/export019_pnp_inputs.py",
+      "source_sha256": "bf06c26e60b6cc6da5aff5d572b165097f9ccf2db3d8ee2d633e9361e820505a",
+      "public_sha256": "bf06c26e60b6cc6da5aff5d572b165097f9ccf2db3d8ee2d633e9361e820505a",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/inspect_cut020_readonly.py",
+      "source_sha256": "741d2cec2ef94f25c616be85df6d1677427a2dc134836d0a7fc565e02e958bc1",
+      "public_sha256": "741d2cec2ef94f25c616be85df6d1677427a2dc134836d0a7fc565e02e958bc1",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_download_probe.py",
+      "source_sha256": "4a64fdf5861a1219efe83976311067f45f196f61916b20afb9c44de237a127d5",
+      "public_sha256": "4a64fdf5861a1219efe83976311067f45f196f61916b20afb9c44de237a127d5",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_execution_preflight.py",
+      "source_sha256": "b1147e1754ab7996b838416e233b0ef2e9d89bf215b48da1c1ea11ef5e337d22",
+      "public_sha256": "b1147e1754ab7996b838416e233b0ef2e9d89bf215b48da1c1ea11ef5e337d22",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_find_blocks.py",
+      "source_sha256": "75c1bf598c79b6e0745647c05951a23ac1150ffcf1b765e0b33f8845233f90d9",
+      "public_sha256": "75c1bf598c79b6e0745647c05951a23ac1150ffcf1b765e0b33f8845233f90d9",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_finish.py",
+      "source_sha256": "f47ad1232807d0ea94926bfe9b55c2dd18a5e0b081037dbeee40a069f8de5447",
+      "public_sha256": "f47ad1232807d0ea94926bfe9b55c2dd18a5e0b081037dbeee40a069f8de5447",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_power_guard.py",
+      "source_sha256": "0fa3fae5a47d8dc64d5e1824fe8750ea64bd463e9b0db918627bedfb4385abf1",
+      "public_sha256": "0fa3fae5a47d8dc64d5e1824fe8750ea64bd463e9b0db918627bedfb4385abf1",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_provenance.py",
+      "source_sha256": "2955934c2c5ebdff49569e6403f83366b1b87efbc7846740ba7ff7ff8496fb27",
+      "public_sha256": "2955934c2c5ebdff49569e6403f83366b1b87efbc7846740ba7ff7ff8496fb27",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_start_input_downloads.py",
+      "source_sha256": "574aa23060cbf01361771a8fc86047988f6ffa4c25ebd29fb7e6b672ead41cca",
+      "public_sha256": "574aa23060cbf01361771a8fc86047988f6ffa4c25ebd29fb7e6b672ead41cca",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/l507_storage.py",
+      "source_sha256": "09cc060b15bd132eacd9ef21267f2d3cdf5c3901b616830338caec4b65f12cbb",
+      "public_sha256": "7bff200fea7047e00196eebb45748e1891020e1601da4e063090c19068fd69c7",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/loop020-rw-source.py",
+      "source_sha256": "9b5bfd7206c6810f8d22386c2513a127ba07fd8d82658778a9e6f671186a057e",
+      "public_sha256": "9b5bfd7206c6810f8d22386c2513a127ba07fd8d82658778a9e6f671186a057e",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/prepare_glomap020_control.py",
+      "source_sha256": "11842ec37fa2ab0834c6b061cde1af88cef2180c5d6eff60052f71175c904f11",
+      "public_sha256": "11842ec37fa2ab0834c6b061cde1af88cef2180c5d6eff60052f71175c904f11",
+      "sanitized": false
+    },
+    {
+      "path": "operations/legacy-session-20261116/prepare_glomap020_remote.py",
+      "source_sha256": "c30425eb53f1d183ecfa39177b1d3deb3b7b261869d2cd497031f7f6e573efa5",
+      "public_sha256": "311b53310178b9fea31324e8b19d1605d03f29ac8eff688215e3d4e1675191d8",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/prepare_loop020_remote.py",
+      "source_sha256": "c42c45461ad3869f7d61747ad73e8f063c9fd6352fb57aac97b4f3817b02e54f",
+      "public_sha256": "f20c18587dbf8e5068b9e621401de7ab8605fdbd8aed57a706a7fc10985b705d",
+      "sanitized": true
+    },
+    {
+      "path": "operations/legacy-session-20261116/run_loop020_control.py",
+      "source_sha256": "b66760470de63f17866f1d269d97cdb37be4ba573ab5de8a1056e2df3690dcea",
+      "public_sha256": "b66760470de63f17866f1d269d97cdb37be4ba573ab5de8a1056e2df3690dcea",
+      "sanitized": false
+    }
+  ],
+  "excluded": [
+    {
+      "path": "home/barranco-roi/config/manual_alignment_023.json",
+      "reason": "real manual placement, preserved only locally"
+    }
+  ],
+  "history": "Fresh source snapshot. Original repositories and histories preserved locally.",
+  "excluded_external_repositories": [
+    "photogrammetry-pipeline",
+    "Alineacion-point-cloud"
+  ],
+  "sanitization": "Hardware MACs replaced by locally administered examples; LAN addresses replaced by TEST-NET; private Drive identifiers redacted.",
+  "notice": "No credentials, states, results, images, databases, models, runtimes or Blender files included."
+}

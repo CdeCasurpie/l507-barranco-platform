@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisión sparse</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:15px system-ui;color:#e6edf4;background:#101820}main{display:grid;grid-template-columns:310px 1fr;height:100vh}aside{padding:22px;background:#17232d;overflow:auto;border-right:1px solid #344450}h1{font-size:22px;margin:8px 0}h2{font-size:15px;margin-top:25px}p{line-height:1.5;color:#b7c6d2}.tag{color:#65d6ba;font-size:12px;font-weight:bold;letter-spacing:2px}select,button,input[type=number]{width:100%;padding:10px;background:#253743;color:white;border:1px solid #4b626f;border-radius:6px}button{cursor:pointer;margin-top:10px}button:hover{background:#365260}label{display:block;margin:18px 0 7px}input[type=range]{width:100%}.check{display:flex;gap:8px;align-items:center}.check input{accent-color:#65d6ba}small{color:#9dafbc;line-height:1.5;display:block}.warning{padding:12px;border-left:3px solid #ffab5e;background:#332b25;color:#f5d9be;font-size:13px}.stats{white-space:pre-line;color:#82e5cc;line-height:1.7}section{position:relative;min-width:0}canvas{display:block;width:100%;height:100%;touch-action:none}#status{position:absolute;top:16px;left:18px;background:#17232ddd;padding:9px 14px;border-radius:5px;pointer-events:none;max-width:85%}.help{position:absolute;bottom:16px;left:18px;background:#17232ddd;padding:9px 14px;pointer-events:none;color:#c0cfd7;font-size:13px}@media(max-width:700px){main{grid-template-columns:230px 1fr}aside{padding:12px}}
+.picks{padding:12px;border:1px solid #64717c;border-radius:6px;margin-top:20px;background:#111a21}.row{display:flex;gap:8px}.row button{flex:1}.row button[aria-pressed=true]{background:#eee;color:#111;border-color:white}.picks input[type=search],.picks textarea,.picks select{width:100%;background:#192731;color:white;border:1px solid #64717c;padding:8px;border-radius:4px}.picks textarea{font:12px monospace;min-height:105px;resize:vertical}.picks ul{padding-left:18px;font-size:12px;overflow-wrap:anywhere;max-height:170px;overflow:auto}.picks li button{width:auto;padding:2px 6px;margin:0 4px}#pickOverlay{position:absolute;inset:0;pointer-events:none}#hoverCamera{position:absolute;display:none;pointer-events:none;padding:7px 10px;background:#111e;color:white;border:1px solid #aaa;font:12px monospace;max-width:90%;overflow-wrap:anywhere}#pickNotice{margin:8px 0}#cameraList{font:12px monospace;min-height:90px}
+</style></head><body><main><aside>
+<span class="tag">SOLO LECTURA · COLMAP</span><h1 id="datasetTitle">Revisión sparse</h1><p>Componentes SfM · inspección 3D</p>
+<label for="model">Componente reconstruido</label><select id="model"></select>
+<p id="stats" class="stats"></p>
+<button id="reset">Centrar vista</button>
+<label for="pointSize">Tamaño de puntos</label><input id="pointSize" type="range" min="1" max="7" step=".5" value="2">
+<label for="color">Color</label><select id="color"><option value="0">Fotográfico RGB</option><option value="1">Error de reproyección</option><option value="2">Longitud del track</option></select>
+<label class="check"><input id="cameras" type="checkbox" checked> Mostrar centros de cámaras</label>
+<label class="check"><input id="onlyCameras" type="checkbox"> Solo cámaras (ocultar nube)</label>
+<div class="picks">
+<h2 style="margin-top:0">Marcar los dos lados del corte</h2>
+<small>Clic corto sobre una cámara naranja: añadir/quitar. Arrastrar sigue girando. Las marcas no conectan ni mueven cámaras.</small>
+<div class="row"><button id="groupA" aria-pressed="true">Lado A</button><button id="groupB" aria-pressed="false">Lado B</button></div>
+<p id="pickNotice" role="status">Selecciona cámaras de un lado; después cambia al otro.</p>
+<label for="cameraSearch">Buscar vista por ID o nombre</label><input id="cameraSearch" type="search" placeholder="ID de imagen o nombre del frame">
+<select id="cameraList" size="5" aria-label="Vistas registradas"></select>
+<button id="addCamera">Añadir vista de la lista al lado activo</button>
+<small>Si se superponen varios centros, usa esta lista. ID de vista ≠ ID de intrínsecos.</small>
+<p id="selectionSummary"></p><ul id="selectedCameras"></ul>
+<button id="copySelection">Copiar cámaras A/B</button><button id="downloadSelection">Descargar selección JSON</button>
+<button id="clearSelection">Limpiar marcas de este componente</button>
+<label for="selectionText">Informe para pegar en el chat</label><textarea id="selectionText" readonly aria-label="Informe de cámaras seleccionadas"></textarea>
+<small>Las marcas se guardan solo en este navegador por dataset/componente; no editan la sparse. No se descargaron fotos originales.</small>
+</div>
+<label for="maxError">Error máximo (px; vacío = todos)</label><input id="maxError" type="number" min=".1" step=".5" placeholder="Sin filtro">
+<label for="minTrack">Track mínimo</label><input id="minTrack" type="number" min="0" step="1" value="0">
+<p class="warning">Cada componente tiene su propio sistema de coordenadas. Cambiar de componente centra su vista; no implica que estén alineados entre sí.</p>
+<h2>¿Se puede corregir?</h2><p>Separación no significa necesariamente geometría rota. Podemos buscar conexiones entre componentes o colocar sus sparse manualmente. Unir puntos sin validar escala y cámaras no corrige la reconstrucción.</p>
+<small>Este visor no modifica puntos, cámaras ni resultados. Las cámaras se muestran como puntos naranjas. La vista muestra hasta 250.000 puntos por componente, muestreados; los originales se conservan completos.</small>
+</aside><section><canvas id="view"></canvas><canvas id="pickOverlay" aria-hidden="true"></canvas><div id="hoverCamera"></div><div id="status">Cargando componentes…</div><div class="help">Clic: marcar cámara · Arrastrar: girar · Mayús + arrastrar o botón derecho: desplazar · Rueda: acercar · Doble clic: centrar</div></section></main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), canvas=$('view'), status=$('status');
+const gl=canvas.getContext('webgl',{antialias:true,alpha:false});
+if(!gl){status.textContent='WebGL no está disponible. Prueba Chrome/Firefox con aceleración gráfica.';throw Error('WebGL required');}
+const vertex=`attribute vec3 aPosition;attribute vec3 aColor;attribute vec2 aQuality;
+uniform mat4 uMVP;uniform float uSize;uniform float uMaxError;uniform float uMinTrack;uniform float uCamera;uniform float uMode;
+varying vec3 vColor;
+void main(){bool camera=aQuality.y>1000000.0;bool hide=camera?uCamera<0.5:(aQuality.x>uMaxError||aQuality.y<uMinTrack);
+gl_Position=hide?vec4(2.0,2.0,2.0,1.0):uMVP*vec4(aPosition,1.0);
+gl_PointSize=camera?uSize+3.0:uSize;vColor=aColor;
+if(!camera&&uMode>0.5&&uMode<1.5){float t=clamp(aQuality.x/4.0,0.0,1.0);vColor=mix(vec3(0.1,0.85,0.7),vec3(1.0,0.12,0.1),t);}
+if(!camera&&uMode>1.5){float t=clamp(aQuality.y/15.0,0.0,1.0);vColor=mix(vec3(0.2,0.25,0.8),vec3(1.0,0.85,0.2),t);}}`;
+const fragment=`precision mediump float;varying vec3 vColor;void main(){vec2 p=gl_PointCoord-0.5;if(dot(p,p)>0.25)discard;gl_FragColor=vec4(vColor,1.0);}`;
+function shader(type,code){let s=gl.createShader(type);gl.shaderSource(s,code);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;}
+let program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,vertex));gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);
+for(const [name,n,offset] of [['aPosition',3,0],['aColor',3,12],['aQuality',2,24]]){let loc=gl.getAttribLocation(program,name);gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,n,gl.FLOAT,false,32,offset);}
+const uniforms=Object.fromEntries(['uMVP','uSize','uMaxError','uMinTrack','uCamera','uMode'].map(n=>[n,gl.getUniformLocation(program,n)]));
+ let count=0, yaw=.5,pitch=-.35,distance=3.2,pan=[0,0],requestID=0,info=null,lastMVP=null,datasetIdentity='';
+ const groups={A:new Set(),B:new Set()};let activeGroup='A',hovered=null;
+ const overlay=$('pickOverlay'),ctx=overlay.getContext('2d');
+ function mul(a,b){let o=new Float32Array(16);for(let c=0;c<4;c++)for(let r=0;r<4;r++)for(let k=0;k<4;k++)o[c*4+r]+=a[k*4+r]*b[c*4+k];return o;}
+function selectionKey(){return 'sparse-camera-marks-v1:'+datasetIdentity+':'+$('model').value;}
+function selectedRows(group){return (info?.cameras||[]).filter(c=>groups[group].has(c.id)).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));}
+function selectionReport(){
+ return {format:'barranco-camera-cut-selection-v1',dataset:datasetIdentity,component:$('model').value,
+  coordinate_frame:'original_local_sfm',geometry_modified:false,correspondences_validated:false,
+  A:selectedRows('A'),B:selectedRows('B')};
+}
+function reportText(){
+ const r=selectionReport(),rows=[document.title,'Componente '+r.component,'Dataset: '+r.dataset];
+ for(const g of ['A','B']){rows.push('\nLADO '+g+':');for(const c of r[g])rows.push('Vista '+c.id+' | '+c.name+' | intrínsecos '+c.camera_id);if(!r[g].length)rows.push('(sin marcar)');}
+ return rows.join('\n');
+}
+function saveMarks(){
+ try{localStorage.setItem(selectionKey(),JSON.stringify({A:selectedRows('A').map(c=>({id:c.id,name:c.name})),B:selectedRows('B').map(c=>({id:c.id,name:c.name}))}));}
+ catch(e){$('pickNotice').textContent='No se pudo guardar en este navegador; copia o descarga la selección.';}
+}
+function restoreMarks(){
+ groups.A.clear();groups.B.clear();hovered=null;
+ try{
+  const saved=JSON.parse(localStorage.getItem(selectionKey())||'{}');
+  for(const g of ['A','B'])for(const c of saved[g]||[]){
+   if((info?.cameras||[]).some(x=>x.id===c.id&&x.name===c.name)&&!groups.A.has(c.id))groups[g].add(c.id);
+  }
+ }catch(e){/* An invalid browser draft must never change server data. */}
+ updateSelection(false);
+}
+function updateSelection(persist=true){
+ $('selectionSummary').textContent='Lado A: '+groups.A.size+' · Lado B: '+groups.B.size;
+ const list=$('selectedCameras');list.replaceChildren();
+ for(const g of ['A','B'])for(const camera of selectedRows(g)){
+  const li=document.createElement('li'),button=document.createElement('button');
+  button.textContent='×';button.title='Quitar vista '+camera.id+' del lado '+g;
+  button.onclick=()=>{groups[g].delete(camera.id);updateSelection();draw();};
+  li.append(button,document.createTextNode(g+' · #'+camera.id+' · '+camera.name));list.append(li);
+ }
+ $('selectionText').value=reportText();
+ if(persist)saveMarks();
+}
+function chooseCamera(camera,toggle=true){
+ if(!camera)return;
+ const other=activeGroup==='A'?'B':'A';
+ if(toggle&&groups[activeGroup].has(camera.id))groups[activeGroup].delete(camera.id);
+ else{groups[other].delete(camera.id);groups[activeGroup].add(camera.id);}
+ hovered=camera;
+ $('pickNotice').textContent='Vista #'+camera.id+' · '+camera.name+' · lado activo '+activeGroup;
+ updateSelection();draw();
+}
+function fillCameraList(){
+ const query=$('cameraSearch').value.trim().toLowerCase(),list=$('cameraList');list.replaceChildren();
+ const rows=(info?.cameras||[]).slice().sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}))
+  .filter(c=>!query||(/^\d+$/.test(query)?String(c.id)===query:c.name.toLowerCase().includes(query)));
+ for(const camera of rows.slice(0,100)){
+  const option=document.createElement('option');option.value=camera.id;option.textContent='#'+camera.id+' · '+camera.name;list.append(option);
+ }
+ if(list.options.length)list.selectedIndex=0;
+ list.title=rows.length+' coincidencias; se muestran hasta 100. Escribe para filtrar.';
+}
+function projectCamera(camera){
+ if(!info||!lastMVP)return null;
+ const p=camera.center.map((v,j)=>(v-info.center[j])/info.display_radius),m=lastMVP;
+ const x=m[0]*p[0]+m[4]*p[1]+m[8]*p[2]+m[12],y=m[1]*p[0]+m[5]*p[1]+m[9]*p[2]+m[13];
+ const z=m[2]*p[0]+m[6]*p[1]+m[10]*p[2]+m[14],w=m[3]*p[0]+m[7]*p[1]+m[11]*p[2]+m[15];
+ if(w<=0||z/w < -1||z/w > 1||Math.abs(x/w)>1||Math.abs(y/w)>1)return null;
+ return {x:(x/w+1)*canvas.clientWidth/2,y:(1-y/w)*canvas.clientHeight/2,depth:z/w};
+}
+function pickCamera(x,y){
+ if(!$('cameras').checked||!info)return null;
+ let best=null,distance2=144;
+ for(const camera of info.cameras){
+  const p=projectCamera(camera);if(!p)continue;
+  const d=(p.x-x)**2+(p.y-y)**2;
+  if(d<distance2){best=camera;distance2=d;}
+ }
+ return best;
+}
+function drawMarks(){
+ if(!ctx)return;
+ overlay.width=canvas.width;overlay.height=canvas.height;
+ const ratio=canvas.width/Math.max(1,canvas.clientWidth);ctx.setTransform(ratio,0,0,ratio,0,0);
+ ctx.font='bold 12px system-ui';ctx.textBaseline='middle';
+ for(const g of ['A','B'])for(const camera of selectedRows(g)){
+  const p=projectCamera(camera);if(!p)continue;
+  ctx.fillStyle=g==='A'?'#fff':'#aaa';ctx.strokeStyle='#000';ctx.lineWidth=2;
+  ctx.beginPath();if(g==='A')ctx.arc(p.x,p.y,7,0,Math.PI*2);else ctx.rect(p.x-7,p.y-7,14,14);ctx.fill();ctx.stroke();
+  const label=g+' #'+camera.id,w=ctx.measureText(label).width+10;
+  ctx.fillStyle='#111e';ctx.fillRect(p.x+10,p.y-9,w,18);ctx.fillStyle='#fff';ctx.fillText(label,p.x+15,p.y);
+ }
+}
+function draw(){
+ let dpr=Math.min(2,devicePixelRatio||1),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}gl.viewport(0,0,w,h);
+ gl.clearColor(.045,.065,.085,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);
+ let c=Math.cos(yaw),s=Math.sin(yaw),cp=Math.cos(pitch),sp=Math.sin(pitch);
+ let ry=new Float32Array([c,0,-s,0,0,1,0,0,s,0,c,0,0,0,0,1]),rx=new Float32Array([1,0,0,0,0,cp,sp,0,0,-sp,cp,0,0,0,0,1]);
+ let t=new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,pan[0],pan[1],-distance,1]);
+ let f=1/Math.tan(Math.PI/8),near=.001,far=Math.max(1000,distance*100),proj=new Float32Array([f/(w/h),0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0]);
+ lastMVP=mul(proj,mul(t,mul(rx,ry)));gl.uniformMatrix4fv(uniforms.uMVP,false,lastMVP);
+ gl.uniform1f(uniforms.uSize,Number($('pointSize').value)*dpr);gl.uniform1f(uniforms.uMaxError,$('maxError').value===''?1e20:Math.max(.01,Number($('maxError').value)));
+ gl.uniform1f(uniforms.uMinTrack,Number($('minTrack').value)||0);gl.uniform1f(uniforms.uCamera,$('cameras').checked?1:0);gl.uniform1f(uniforms.uMode,Number($('color').value));
+ if($('onlyCameras').checked&&info)gl.drawArrays(gl.POINTS,info.points,info.camera_count);else gl.drawArrays(gl.POINTS,0,count);
+ drawMarks();
+}
+function reset(){yaw=.5;pitch=-.35;distance=3.2;pan=[0,0];draw();}
+let dragging=null;
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
+ canvas.addEventListener('pointerdown',e=>{dragging={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false,pan:e.shiftKey||e.button===2||e.button===1};canvas.setPointerCapture(e.pointerId);$('hoverCamera').style.display='none';});
+ canvas.addEventListener('pointermove',e=>{
+  if(!dragging){
+   const r=canvas.getBoundingClientRect(),c=pickCamera(e.clientX-r.left,e.clientY-r.top),tip=$('hoverCamera');
+   canvas.style.cursor=c?'pointer':'grab';
+   if(c){tip.textContent='Vista #'+c.id+' · '+c.name;tip.style.left=Math.max(0,Math.min(e.clientX-r.left+15,canvas.clientWidth-220))+'px';tip.style.top=Math.max(0,e.clientY-r.top-35)+'px';tip.style.display='block';}else tip.style.display='none';
+   return;
+  }
+  if(!dragging.moved&&Math.hypot(e.clientX-dragging.startX,e.clientY-dragging.startY)<5)return;
+  dragging.moved=true;let dx=e.clientX-dragging.x,dy=e.clientY-dragging.y;
+  if(dragging.pan||e.shiftKey){pan[0]+=dx/canvas.clientHeight*distance*.7;pan[1]-=dy/canvas.clientHeight*distance*.7;}else{yaw+=dx*.007;pitch+=dy*.007;}
+  dragging.x=e.clientX;dragging.y=e.clientY;draw();
+ });
+ canvas.addEventListener('pointerup',e=>{
+  if(dragging&&!dragging.moved&&!dragging.pan&&e.button===0){
+   const r=canvas.getBoundingClientRect();const camera=pickCamera(e.clientX-r.left,e.clientY-r.top);
+   if(camera)chooseCamera(camera);else $('pickNotice').textContent='No hay un centro de cámara aquí. Acerca la vista o activa «Solo cámaras».';
+  }
+  dragging=null;
+ });
+ for(const type of ['pointercancel','lostpointercapture'])canvas.addEventListener(type,()=>dragging=null);
+ canvas.addEventListener('pointerleave',()=>$('hoverCamera').style.display='none');
+canvas.addEventListener('wheel',e=>{e.preventDefault();distance=Math.max(.02,Math.min(10000,distance*Math.exp(e.deltaY*.001)));draw();},{passive:false});
+canvas.addEventListener('dblclick',reset);$('reset').onclick=reset;new ResizeObserver(draw).observe(canvas);
+ for(const id of ['pointSize','color','cameras','onlyCameras','maxError','minTrack'])$(id).addEventListener('input',draw);
+ for(const g of ['A','B'])$('group'+g).onclick=()=>{
+  activeGroup=g;for(const side of ['A','B'])$('group'+side).setAttribute('aria-pressed',String(side===g));
+  $('pickNotice').textContent='Lado '+g+' activo: marca cámaras de este lado del corte.';
+ };
+ $('cameraSearch').oninput=fillCameraList;
+ $('addCamera').onclick=()=>chooseCamera(info?.cameras.find(c=>String(c.id)===$('cameraList').value),false);
+ $('cameraList').ondblclick=$('addCamera').onclick;
+ $('clearSelection').onclick=()=>{groups.A.clear();groups.B.clear();updateSelection();draw();};
+ $('copySelection').onclick=async()=>{
+  const text=reportText();$('selectionText').value=text;
+  try{await navigator.clipboard.writeText(text);$('pickNotice').textContent='Informe copiado. Pégalo en el chat.';}
+  catch(e){$('selectionText').focus();$('selectionText').select();$('pickNotice').textContent='Seleccionado el informe: pulsa Ctrl+C y pégalo en el chat.';}
+ };
+ $('downloadSelection').onclick=()=>{
+  const report=selectionReport(),blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;
+  link.download='camaras-corte-'+document.title.split(' · ')[0].replaceAll(' ','-')+'-componente-'+report.component+'.json';link.click();URL.revokeObjectURL(url);
+ };
+async function json(url){const r=await fetch(url);if(!r.ok)throw Error(await r.text());return r.json();}
+async function load(id){
+ const token=++requestID;info=null;count=0;draw();status.textContent='Cargando componente '+id+'…';
+ try{
+   const meta=await json('/model/'+id+'/info.json');
+   if(token!==requestID)return;
+   const response=await fetch('/model/'+id+'/cloud.bin');
+  if(!response.ok)throw Error(await response.text());const data=await response.arrayBuffer();if(token!==requestID)return;
+   info=meta;count=data.byteLength/32;gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,data,gl.STATIC_DRAW);
+   $('cameraSearch').value='';restoreMarks();fillCameraList();
+  $('stats').textContent=meta.total_points.toLocaleString('es')+' puntos originales\n'+meta.points.toLocaleString('es')+' puntos mostrados\n'+meta.camera_count+' imágenes registradas';
+  $('maxError').value='';$('minTrack').value=0;status.textContent='Componente '+id+' · coordenadas SfM locales · '+(meta.sampled?'vista muestreada':'todos los puntos');reset();
+ }catch(e){if(token===requestID)status.textContent='Error: '+e.message;}
+}
+$('model').onchange=()=>load($('model').value);
+ json('/api/models').then(data=>{datasetIdentity=data.dataset;const block=data.dataset.match(/\/(\d{3})-/);const title=block?'Manzana '+block[1]:'Revisión sparse';$('datasetTitle').textContent=title;document.title=title+' · revisión sparse';for(const m of data.models){const o=document.createElement('option');o.value=m.id;o.textContent='Componente '+m.id+' · '+m.images+' imágenes'+(m.selected?' · seleccionado':'');$('model').append(o);}$('model').value=data.selected;load(data.selected);}).catch(e=>status.textContent='Error: '+e.message);
+</script></body></html>
