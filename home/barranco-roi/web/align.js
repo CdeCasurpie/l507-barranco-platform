@@ -221,7 +221,7 @@ function anchorCaption(a){return a.accepted_derived?a.block+' · revisión '+a.i
 function populateSetup(){
   const source=$('alignIncoming').value||state.incoming;
   $('alignIncoming').replaceChildren(new Option('Selecciona una reconstrucción…',''));
-  for(const r of state.catalog.pending)$('alignIncoming').add(new Option(`${r.block} · ${r.label} · componente ${r.component} · ${r.images.toLocaleString()} vistas`,r.id));
+  for(const r of state.catalog.pending)$('alignIncoming').add(new Option(r.display_label||`${r.block} · ${r.label} · componente ${r.component} · ${r.images.toLocaleString()} vistas`,r.id));
   $('alignIncoming').value=source||'';
   $('alignAnchors').replaceChildren();
   for(const a of state.catalog.anchors){

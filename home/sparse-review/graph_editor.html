@@ -1,0 +1,48 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><title>Editor manual sparse</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1013;color:#eee;font:14px system-ui}main{display:grid;grid-template-columns:320px 1fr;height:100vh}aside{padding:16px;overflow:auto;background:#151a1d;border-right:1px solid #555}h1{font-size:18px}button,input,select{background:#222;color:white;border:1px solid #666;border-radius:4px;padding:8px;width:100%;margin:4px 0}button{cursor:pointer}label{display:block;margin-top:10px}small{display:block;color:#bbb;line-height:1.5}.warning{padding:10px;background:#382a16;color:#ffe1a9}.row{display:flex;gap:5px}.row>*{min-width:0}section{position:relative;min-width:0}canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}#overlay{pointer-events:none}#notice{position:absolute;bottom:12px;left:12px;right:12px;padding:10px;background:#111d;pointer-events:none}pre{white-space:pre-wrap;font-size:11px}input[type=checkbox]{width:auto}#pins{font-size:12px}a{color:white}@media(max-width:700px){main{grid-template-columns:240px 1fr}}
+</style><main><aside>
+<h1 id="title">Editor manual por grafo</h1>
+<p class="warning"><b>Borrador no validado.</b> Mover la nube no demuestra que las fotografías encajen. No inicia densificación.</p>
+<small>Clic en una cámara para elegirla. Activa «Mover» y arrástrala en el plano de pantalla. Sin mover: arrastrar gira; Mayús o botón derecho desplaza; rueda acerca.</small>
+<label>Buscar cámara por ID o nombre<input id="search" placeholder="Ej.: 496"></label>
+<select id="cameras" size="4"></select><button id="choose">Seleccionar cámara</button>
+<div id="selected">Sin cámara seleccionada</div>
+<label><input type="checkbox" id="move"> Mover cámara seleccionada</label>
+<div class="row"><button id="modeMove">G · Mover</button><button id="modeRotate">R · Rotar</button></div>
+<div class="row"><button id="topView">7 · Arriba</button><button id="frontView">1 · Frente</button><button id="sideView">3 · Lado</button></div>
+<div class="row"><button id="brushMode">C · Pincel circular</button><button id="clearMulti">Esc · Deseleccionar</button></div>
+<label>Radio del pincel <input id="brushRadius" type="range" min="5" max="150" value="30"></label>
+<small id="multiSummary">0 cámaras seleccionadas</small>
+<small>Pincel C: arrastrar pinta cámaras; Mayús resta. Rueda cambia tamaño. Selecciona centros proyectados, incluidos los del fondo. Supr elimina el grupo; Ctrl+A selecciona todas.</small>
+<small>7 arriba · 1 frente · 3 lado · 9 opuesta · F encuadrar · G mover · R rotar · C pincel · Esc salir/limpiar · Ctrl+Z deshacer · Ctrl+Mayús+Z/Ctrl+Y rehacer · Ctrl+S guardar · H mostrar/ocultar grafo.</small>
+<small id="modeLabel">Modo G · arrastra una cámara para moverla. Flechas: dirección de mirada.</small>
+<div class="row"><button id="anchor">Fijar en original</button><button id="release">Quitar restricción</button></div>
+<button id="deleteCamera">Eliminar cámara seleccionada · Supr</button>
+<small>Excluye la vista del borrador y la copia derivada. No borra originales ni fotografías. Puedes deshacer.</small>
+<small>Fijar conserva posición y orientación originales. Al retriangular, TODAS las cámaras conservan sus poses editadas. No se ejecuta BA.</small>
+<div class="row"><label>X<input id="x" type="number" step="any"></label><label>Y<input id="y" type="number" step="any"></label><label>Z<input id="z" type="number" step="any"></label></div>
+<button id="apply">Aplicar XYZ</button><small>XYZ en unidades SfM locales, no metros.</small>
+<div class="row"><label>Giro X°<input id="rx" type="number" value="0" step="1"></label><label>Giro Y°<input id="ry" type="number" value="0" step="1"></label><label>Giro Z°<input id="rz" type="number" value="0" step="1"></label></div>
+<button id="applyRotation">Aplicar rotación de hueso</button>
+<label>Eje de giro local de la cámara<select id="rotationAxis"><option value="z">Z · dirección de mirada (giro en pantalla)</option><option value="x">X · derecha de la cámara</option><option value="y">Y · vertical de la cámara</option></select></label>
+<label>Rigidez <input id="stiffness" type="range" min="-2" max="2" value="0" step=".1"></label>
+<label>Alcance por conexiones <input id="radius" type="range" min="1" max="100" value="10" step="1"></label>
+<small id="radiusLabel">10 conexiones · núcleo rígido y caída suave hasta cero</small>
+<label><input id="directOnly" type="checkbox"> Solo vecinas directas (un enlace)</label>
+<small>Mientras arrastras, usa la rueda para cambiar el alcance. Sin arrastrar, la rueda hace zoom. Nunca afecta cámaras desconectadas.</small>
+<small>Más rigidez: influencia más localizada. Menos: se propaga más por el grafo.</small>
+<label><input id="showGraph" type="checkbox" checked> Mostrar grafo (hasta 1.500 aristas)</label>
+<small>Verde: puntos compartidos. Gris: prior temporal, no correspondencia demostrada.</small>
+<div class="row"><button id="undo">Deshacer</button><button id="redo">Rehacer</button></div>
+<button id="reset">Volver al original en este borrador</button>
+<div id="pins"></div>
+<button id="save">Guardar revisión del borrador</button>
+<select id="history"><option value="">Revisiones guardadas…</option></select><button id="restore">Cargar revisión</button>
+<button id="adjust">Retriangular copia · cámaras fijas · SIN BA</button>
+<small>Requiere una cámara movida y otra fija, separadas. Recalcula puntos en una copia desde matches verificados existentes, con todas las poses fijas, CPU limitada y guardas. Sin BA, nuevos matches ni densificación. No garantiza cerrar huecos.</small>
+<button id="cancel" disabled>Cancelar solo este ajuste</button>
+<pre id="job"></pre><p><a id="back">Volver al visor original</a></p>
+<small>Vista de hasta 80.000 puntos; la exportación usa la sparse completa. Los originales y las 14 anclas permanecen protegidos. Revisión derivada ≠ geometría aprobada.</small>
+</aside><section><canvas id="view"></canvas><canvas id="overlay"></canvas><div id="notice">Preparando grafo desde tracks completos…</div></section></main>
+<script>window.EDITOR_CONTEXT=__CONTEXT__;</script><script src="/editor-assets/graph_editor.js"></script></html>

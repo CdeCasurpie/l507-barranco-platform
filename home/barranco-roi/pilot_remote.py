@@ -46,7 +46,7 @@ def main():
 import json,os
 from pathlib import Path
 if not (Path.home()/'L507_015.txt').is_file():raise RuntimeError('Wrong tag')
-if '02:00:00:00:00:01' not in [p.read_text().strip().lower() for p in Path('/sys/class/net').glob('*/address')]:raise RuntimeError('Wrong MAC')
+if '02:00:71:28:66:c7' not in [p.read_text().strip().lower() for p in Path('/sys/class/net').glob('*/address')]:raise RuntimeError('Wrong MAC')
 if not os.path.ismount('/data'):raise RuntimeError('Authorized source /data is not mounted')
 p=Path({REMOTE!r});p.mkdir(parents=True,exist_ok=True)
 print('DOWNLOAD_REPLY='+json.dumps({{'directory':str(p)}}))

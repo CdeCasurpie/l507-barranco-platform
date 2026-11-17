@@ -1,5 +1,55 @@
 # Revisión sparse local
 
+## Editor manual por grafo (8790)
+
+En **http://127.0.0.1:8790/** elegir variante y componente; pulsar
+**Abrir editor manual por grafo**. Las 14 anclas originales no son editables.
+Los visores independientes 878x siguen siendo solo lectura.
+
+1. Buscar una cámara por ID/nombre o seleccionarla en el canvas.
+2. Fijar una o varias cámaras que deben permanecer en su posición original.
+3. Seleccionar otra y activar **Mover cámara seleccionada**. Arrastrar en el
+   plano de pantalla o editar XYZ (unidades SfM, no metros).
+4. Ajustar rigidez: alta produce influencia más localizada; baja propaga más.
+   Verde significa soporte por tracks; gris es prior temporal, NO matches.
+5. Deshacer/rehacer; **Guardar revisión del borrador** antes de recargar.
+   Las revisiones se guardan inmutables fuera de los originales.
+6. Opcional y explícito: **Retriangular copia · cámaras fijas · SIN BA**. Requiere
+   una cámara movida y otra fija, separadas. Nunca inicia densificación.
+
+El preview muestra hasta80.000puntos y conserva RGB. Sus desplazamientos se
+obtienen del promedio de los desplazamientos de las cámaras de cada track.
+La generación final recalcula los puntos desde matches verificados existentes
+con el triangulador de bajo nivel. Se mantienen los intrínsecos y TODAS las
+poses editadas; no se ejecuta BA ni matching nuevo. Puede completar y fusionar
+tracks solo desde las correspondencias existentes y sus controles geométricos.
+
+**El borrador deformado no es una sparse validada.** El job produce una copia
+COLMAP y compara reproyección muestreada, profundidad y cumplimiento de pins.
+Puede terminar rechazada; incluso si pasa ese filtro requiere revisión del
+usuario. No garantiza cerrar cortes ni reconstruir superficies ausentes.
+Para una futura densa se debe seleccionar la revisión derivada exacta y sus
+fuentes correspondientes, con autorización separada; no se toma el canvas como
+una modificación implícita del modelo original.
+
+Estado privado: `/data/barranco/manual-graph-editor/`.
+Revisiones `g-*.json`; jobs `jobs/j-*/` con request, snapshot del worker,
+logs, métricas y `candidate/`. Candidatas completas aparecen en el catálogo
+como Manual/candidate_review_required o Manual/candidate_rejected.
+Ninguna está aprobada automáticamente.
+
+POST solo de origen local con cabecera del editor, límite de tamaño, catálogo
+cerrado de modelos, hashes de fuente y revisión. Worker separado bajo systemd,
+4CPU/40GiB/swap0/1h, CPU-only y guardas térmicas/disco/RAM. Cancelar detiene
+solo ese servicio; cerrar navegador no lo cancela. No hay retry automático.
+El catálogo ahora utiliza runtime `alignment313`; el job de triangulación usa
+`alignment311` por su API de configuración de poses estándar COLMAP3.11.
+
+Tests:
+`/data/barranco/runtime/alignment311/bin/python -B -m unittest -v test_graph_edit test_catalog test_app`.
+`python3 -B browser_graph_check.py` prueba Chrome con perfil aislado, movimientos
+solo en borrador y sin guardar/ajustar una manzana real.
+
 ## Catálogo de todas las sparse (16-nov-2026)
 
 **http://127.0.0.1:8790/** — `barranco-sparse-catalog.service`.

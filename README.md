@@ -18,6 +18,7 @@ Este repositorio los integra como dependencias separadas.
 | `home/sparse-review/` | Visor sparse y catálogo multimanana en un solo puerto |
 | `phone-run/` | Helpers de las campañas iniciales, conservados como código histórico |
 | `operations/legacy-session-20261116/` | Helpers recuperados de la sesión operativa; no son una CLI portable |
+| `operations/manual-editor-20261117/` | Helpers históricos de triangulación fija, dense, RGB, entregas y renders |
 | `home/*.md`, `docs/` | Decisiones, historial, seguridad y documentación operativa |
 
 ## Seguridad antes de ejecutar
@@ -65,6 +66,9 @@ PyCOLMAP 3.11 **no está implementada** (`Rig`). Los workers de campañas usan s
 runtime certificado separado.
 
 ## Pruebas sin ejecutar campañas
+
+Los cambios del editor y las entregas están documentados en
+[Editor manual y entregas](docs/MANUAL-EDITOR-DELIVERY.md).
 
 Consultar [pruebas](docs/TESTING.md). No ejecutar scripts operativos para
 comprobar si “funcionan”: varias herramientas actúan al importar o arrancar.

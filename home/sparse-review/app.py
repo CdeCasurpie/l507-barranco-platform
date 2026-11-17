@@ -75,7 +75,8 @@ def read_cameras(path):
                         [2*x*z-2*w*y, 2*y*z+2*w*x, 1-2*x*x-2*y*y]]
             center = [-sum(rotation[k][j] * (tx, ty, tz)[k] for k in range(3)) for j in range(3)]
             cameras.append(dict(id=image_id, camera_id=camera_id,
-                                name=name.decode('utf-8', errors='replace'), center=center))
+                                name=name.decode('utf-8', errors='replace'), center=center,
+                                rotation=rotation, direction=rotation[2]))
     return cameras
 
 

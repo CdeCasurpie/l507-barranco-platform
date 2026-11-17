@@ -316,7 +316,7 @@ function render() {
       const pos=screen(block.center);
       if (pos[0]<5 || pos[1]<20 || pos[0]>state.width-35 || pos[1]>state.height-35) continue;
       if (!state.overviewView && block.block===state.block) continue;
-      const label=block.block+(block.block==='023' ? ' *' : '');
+      const label=(block.label||block.block)+(block.block==='023' ? ' *' : '');
       ctx.font='bold 12px system-ui';const tw=ctx.measureText(label).width;
       ctx.fillStyle='#111111e0';ctx.fillRect(pos[0]-5,pos[1]-16,tw+10,23);
       ctx.fillStyle=block.block===state.block ? '#ffffff' : '#aaaaaa';

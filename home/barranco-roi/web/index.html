@@ -7,20 +7,23 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/multi.css">
   <link rel="stylesheet" href="/align.css">
+  <link rel="stylesheet" href="/sparse-visualizer.css">
   <script src="/app.js" defer></script>
   <script src="/cloud-cache.js" defer></script>
   <script src="/cloud-renderer.js" defer></script>
   <script src="/align.js" defer></script>
+  <script src="/sparse-visualizer.js" defer></script>
 </head>
 <body>
   <header class="topbar">
     <div class="brand">Barranco <span>/ Reconstrucciones</span></div>
-    <nav class="app-tabs" aria-label="Secciones"><button id="alignTab" class="active">Alineación</button><button id="roiTab">Polígonos / ROI</button></nav>
+    <nav class="app-tabs" aria-label="Secciones"><button id="alignTab" class="active">Alineación</button><button id="roiTab">Polígonos / ROI</button><button id="sparseViewTab">Visualizador sparse</button></nav>
     <div class="block-badge"><span class="status-dot"></span>MANZANA ACTIVA <b id="activeBlock">025</b><span class="badge-sub">recorte independiente</span></div>
     <div class="local-badge">LOCAL <span>127.0.0.1</span></div>
   </header>
 
   <section id="alignWorkspace"></section>
+  <section id="sparseViewWorkspace" hidden></section>
   <main id="roiWorkspace" hidden>
     <section class="workspace">
       <div class="workspace-head"><div><h1>Delimitar ROI</h1><p>Vista superior · sparse original · ninguna manzana se modifica</p></div></div>

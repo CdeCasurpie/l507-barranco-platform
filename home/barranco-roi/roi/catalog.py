@@ -188,7 +188,8 @@ class BlockCatalog:
                 bounds = np.quantile(world, [.005, .995], axis=0)
                 lows.append(bounds[0]); highs.append(bounds[1])
                 stride = max(1, math.ceil(len(world) / 8000))
-                blocks.append({'block': block, 'points': world[::stride].round(5).tolist(),
+                blocks.append({'block': block, 'label': r.get('source_block', block),
+                    'points': world[::stride].round(5).tolist(),
                     'rgb': colors[::stride].tolist(),
                     'color': r['entry']['categorical_rgb'], 'center': np.median(world, axis=0).tolist(),
                     'focus_bounds': bounds.tolist(), 'placement': r['placement'],

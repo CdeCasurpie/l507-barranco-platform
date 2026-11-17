@@ -133,7 +133,7 @@ class Handler(BaseHTTPRequestHandler):
             query = parse_qs(url.query)
             if path.startswith('/api/alignment/'):
                 return self.alignment_get(path, query)
-            if path in ('/align.js', '/align.css', '/cloud-renderer.js', '/cloud-cache.js'):
+            if path in ('/align.js', '/align.css', '/cloud-renderer.js', '/cloud-cache.js', '/sparse-visualizer.js', '/sparse-visualizer.css'):
                 return self.send(200, (ROOT/'web'/path[1:]).read_bytes(),
                     'text/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8')
             block = query.get('block', ['025'])[0]

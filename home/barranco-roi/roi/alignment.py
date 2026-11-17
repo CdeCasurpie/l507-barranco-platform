@@ -299,13 +299,18 @@ class AlignmentService:
 
     def catalog_payload(self):
         placements = self.placement_rows()
+        selection_path = self.root/"alignment-selection.json"
+        selection = load(selection_path) if selection_path.is_file() else None
+        visible = selection.get("reconstructions", {}) if selection else None
         return {"anchor_revision": self.anchor_revision, "world_origin": self.catalog.origin,
             "anchors": [{**{k: v for k, v in a.items() if k != "input_manifest"},
                          "geometry_version": self.geometry_version(key), **self.availability(key)}
                         for key, a in self.anchors.items()],
-            "pending": [{**r, "geometry_version": self.geometry_version(key), **self.availability(key),
-                         "approved": any(p["reconstruction"] == key for p in placements)}
-                        for key, r in self.records.items()],
+            "pending": [{**r, **({"display_label": visible[key]} if visible is not None else {}),
+                          "geometry_version": self.geometry_version(key), **self.availability(key),
+                          "approved": any(p["reconstruction"] == key for p in placements)}
+                        for key, r in sorted(self.records.items(), key=lambda item: (item[1]["block"], item[0]))
+                        if visible is None or key in visible],
             "placements": placements}
 
     def geometry(self, key):

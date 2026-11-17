@@ -1,0 +1,410 @@
+{
+  "snapshot": "manual-editor-delivery",
+  "files": [
+    {
+      "path": "home/sparse-review/app.py",
+      "source_sha256": "dc1d45de9b2db76009c0272a8bb116f840e092566ff1e8e31ec5dfd237bb531a",
+      "public_sha256": "dc1d45de9b2db76009c0272a8bb116f840e092566ff1e8e31ec5dfd237bb531a",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/browser_graph_check.py",
+      "source_sha256": "72f0db521a30bc4b76d7509d5c7a4e248a52c713c5c5b80f919ee3363a7944eb",
+      "public_sha256": "72f0db521a30bc4b76d7509d5c7a4e248a52c713c5c5b80f919ee3363a7944eb",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/graph_edit.py",
+      "source_sha256": "d00988b44bfca4d0ca6e13321bb617e400d4b81f89fb937fc4018e036823dbb4",
+      "public_sha256": "d00988b44bfca4d0ca6e13321bb617e400d4b81f89fb937fc4018e036823dbb4",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/graph_editor.html",
+      "source_sha256": "700d223fdf50be3a3528efd9b10b16c3a3d748cc60f2257b89878b0e74f1c4e6",
+      "public_sha256": "700d223fdf50be3a3528efd9b10b16c3a3d748cc60f2257b89878b0e74f1c4e6",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/graph_editor.js",
+      "source_sha256": "a0bbf0a03294ac5052be10da7cf0d427b61dfc6b27387671136bad844dccae2c",
+      "public_sha256": "a0bbf0a03294ac5052be10da7cf0d427b61dfc6b27387671136bad844dccae2c",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/graph_job.py",
+      "source_sha256": "c831b8218766b5f2618ba37396311eec346547dc48ddc176c724e9a84caabad0",
+      "public_sha256": "c831b8218766b5f2618ba37396311eec346547dc48ddc176c724e9a84caabad0",
+      "sanitized": false
+    },
+    {
+      "path": "home/sparse-review/test_graph_edit.py",
+      "source_sha256": "df33ba706201ff70ca37a9e01519ab000ed286f1bc5ebaf809f9b2f582a4156f",
+      "public_sha256": "df33ba706201ff70ca37a9e01519ab000ed286f1bc5ebaf809f9b2f582a4156f",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/app.py",
+      "source_sha256": "4d3009a73e3400245c9a28d3727091fb0091729e444c27a4db235871035aa064",
+      "public_sha256": "4d3009a73e3400245c9a28d3727091fb0091729e444c27a4db235871035aa064",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/pilot_remote.py",
+      "source_sha256": "460a17c18ef9f85e034ccdcbcaac55dd68b2fde424539f9636023feba0b318b9",
+      "public_sha256": "c944ff3ac83f6903ad1d95ebaf184cab8ecbe4a63fb8846080b5908c45c21898",
+      "sanitized": true
+    },
+    {
+      "path": "home/barranco-roi/roi/alignment.py",
+      "source_sha256": "fb9b425cea29510fc3c04f1d2da10abb17f3683298ca1e3cd7fc0078ce4670ae",
+      "public_sha256": "fb9b425cea29510fc3c04f1d2da10abb17f3683298ca1e3cd7fc0078ce4670ae",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/roi/catalog.py",
+      "source_sha256": "b2aa07e6c3877a13dfcc789937d98e2eba1f5c957791ccbd66dcef21dbebf742",
+      "public_sha256": "b2aa07e6c3877a13dfcc789937d98e2eba1f5c957791ccbd66dcef21dbebf742",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/align.js",
+      "source_sha256": "40ca49351df3a098e5eb6123eb38dd3e582e1a13008f6572eac9c018ff38b902",
+      "public_sha256": "40ca49351df3a098e5eb6123eb38dd3e582e1a13008f6572eac9c018ff38b902",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/app.js",
+      "source_sha256": "e4eecc92435181a87c19ab8b7619ce30fcaad078b61adf272f9a735371b757a3",
+      "public_sha256": "e4eecc92435181a87c19ab8b7619ce30fcaad078b61adf272f9a735371b757a3",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/index.html",
+      "source_sha256": "514cc9d80f390fd2291313e29c1a57bc51035b4f6e1e1e2fb486db87d7427c91",
+      "public_sha256": "514cc9d80f390fd2291313e29c1a57bc51035b4f6e1e1e2fb486db87d7427c91",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/sparse-visualizer.css",
+      "source_sha256": "5ffcbf0cf04756777154501f858f90a05212bba699cda903f4a0ec24432f1ee9",
+      "public_sha256": "5ffcbf0cf04756777154501f858f90a05212bba699cda903f4a0ec24432f1ee9",
+      "sanitized": false
+    },
+    {
+      "path": "home/barranco-roi/web/sparse-visualizer.js",
+      "source_sha256": "fc0a1172dc92366df422f22ad3c1797dd09bab6c5b8a42c4072caab1b360a0e5",
+      "public_sha256": "fc0a1172dc92366df422f22ad3c1797dd09bab6c5b8a42c4072caab1b360a0e5",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/collect_cut020_review.py",
+      "source_sha256": "7995f74575bf70c5e5b27cd48d1f47b93047c5302ecaa4ee948acccb2ae13ab3",
+      "public_sha256": "d765c2d8d6cecdfca7eb7ddad0a69bb96b9390a4aecabcadb2d981fd03215032",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/prepare_manual_triangulation.py",
+      "source_sha256": "5e8a9760849d4b31beb95b8bcd32c03cffebc356d7ef82060b15f1dd0fcdc1dc",
+      "public_sha256": "67fa11c695b1aadcb98aecb0d48cbece58b3cc4a6bbde28c126fab5a1f2f2129",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/resume_manual_triangulation.py",
+      "source_sha256": "7082daa27e931f3bdf50dc40370378e9791a1039e1f18446b1fcc58682416b8e",
+      "public_sha256": "1e0d7686da5e804d130c267b8c6497fcd0807eec36763b4f0d20b5bd735129ef",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/launch_verified_triangulation.py",
+      "source_sha256": "e0399068669f8f160d5a1a1ac9eac0e252274f8d13a52f158e8b14c386096917",
+      "public_sha256": "e0399068669f8f160d5a1a1ac9eac0e252274f8d13a52f158e8b14c386096917",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/retriangulate_saved_barranco.py",
+      "source_sha256": "6caf04ca02f218d27717b1ab0cfe005c37f9a6644cd6929d2c0905b672f7fa49",
+      "public_sha256": "6caf04ca02f218d27717b1ab0cfe005c37f9a6644cd6929d2c0905b672f7fa49",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/probe_remote_triangulation.py",
+      "source_sha256": "cc1e22ef1719b7e4c3b9de64ca20577dceaf6f52efc09ead3e26c01deaef5d6b",
+      "public_sha256": "e4875e51faab083855e1d46fa135b3c1ad1ca2d4a84733965cfe3fc170e0341f",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/pilot022_dense_preflight.py",
+      "source_sha256": "d7a4eaecdafd554ad3393be8b32d224f8649e716a1c9d7ca862b4fac9a6a027e",
+      "public_sha256": "b70d4dd3cb7e39207fc0a05b03691f42dd2915820d776a4b880a07ba872479a2",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/pilot022_container_probe.py",
+      "source_sha256": "0187958e899daabe6932947655650d6a27003ad1f7ac45ceaa0a8d6e21737f29",
+      "public_sha256": "405f320a6aee685c21e322086c5b5e2e1edd8a6c5f7c7aeff5dc23a9b6bd5c09",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/pilot022_remote_worker.py",
+      "source_sha256": "b8d4fb0f1b490affbd6d4972f17464c936412f95d1b6a7c878de52cf9a119d91",
+      "public_sha256": "b8d4fb0f1b490affbd6d4972f17464c936412f95d1b6a7c878de52cf9a119d91",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/pilot022_mesh_chunks.py",
+      "source_sha256": "1297823b740170ffb5b91a7428e4e307465a68c4392da57b278ae60ec60b3391",
+      "public_sha256": "1297823b740170ffb5b91a7428e4e307465a68c4392da57b278ae60ec60b3391",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/start_pilot022_dense.py",
+      "source_sha256": "f54a24de18db290a637646b0b9c7087b3131733ccab78c1106a15cfde9cba097",
+      "public_sha256": "222fb8facd4937b0178ba5eee214b50844446535d6106dd8a6b1a4fa86020143",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/status_pilot022_dense.py",
+      "source_sha256": "402da5cb9cf4b1f3a3f7169c8be98792f77adcb65de853d3ffad1230b5b8da05",
+      "public_sha256": "ddd456f16774806650781e2dda9fd91ece05cd1e86b08bb3de195b30a2137f77",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/start_all_manual_dense.py",
+      "source_sha256": "16a7e61d8febcf3b8f7ae60ec92991a21b76267b4d4e1629fd2ed81a36473a22",
+      "public_sha256": "16a7e61d8febcf3b8f7ae60ec92991a21b76267b4d4e1629fd2ed81a36473a22",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/status_all_manual_dense.py",
+      "source_sha256": "f63d7aaeaa541c8ad3531189df0b05133bff0d64911e909c63dbbb7159e42652",
+      "public_sha256": "58b57bb73318f257f48770599401cdf7358d4ae66a7f2038d81b58ab3bd46b2b",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/restart_dense019_persistent.py",
+      "source_sha256": "951362c1f5839f572d505035570485e5b94d17e263bac34cd74e103796cceb2a",
+      "public_sha256": "fd2ed5dfc1b3618598bb609399d155763354bb260bd52c246cb782d829679ea0",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/fix_pending_dense_mesh_input.py",
+      "source_sha256": "f70d98711b938d390df01f172c5d90f4523bbbf78a165cf20d355d25960bb019",
+      "public_sha256": "46b4c8ac1a92220e3736fc38faf7e7767da6fcbd4c7eadce0e37715f6dd55cb2",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/mesh026_existing_worker.py",
+      "source_sha256": "89e5936f084339dfa0b4ae8f985c40a26910a14bd6be2fffbb58922d6ad8ff86",
+      "public_sha256": "89e5936f084339dfa0b4ae8f985c40a26910a14bd6be2fffbb58922d6ad8ff86",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/mesh026_existing_chunks.py",
+      "source_sha256": "d29c3e83b03f1ac418f6b2f582a44175d821a701080270f28ec5ade486bd1e5d",
+      "public_sha256": "d29c3e83b03f1ac418f6b2f582a44175d821a701080270f28ec5ade486bd1e5d",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/start_mesh026_existing.py",
+      "source_sha256": "2ed4a633a26431ae3e8bc6b369c6d2e5a72ce22ab5471749f2a32c151e207e54",
+      "public_sha256": "46799f799e8adcf93bbec5d5fdf3a1ff17580d1ac871f1152d945dee9ab21aa4",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/collect_simplify_mesh026.py",
+      "source_sha256": "2d74f9065a3313b2c809221b5b6ed0d8e7c732da9728ae491b55bcb23c4cd2cb",
+      "public_sha256": "55caabb26b17022e1ea36f2845a40e68624fde2129901c35d16d5d4eabf66b45",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/simplify_mesh026.py",
+      "source_sha256": "2781c9f37c04118813b56ff53812cd8c42ceab93b2e548bd28a728cc64e7d965",
+      "public_sha256": "2781c9f37c04118813b56ff53812cd8c42ceab93b2e548bd28a728cc64e7d965",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/collect019_render.py",
+      "source_sha256": "8e42f30fe0fdad227fc6fc8d74b1931699c5a2c7532b2de7c19aeea15b60bfac",
+      "public_sha256": "459356207fe4a7dfd8f33ec9554de8d842c6a08cee96bab31a3575b0e662c3e0",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/join019_preview.py",
+      "source_sha256": "f281f9b9b4e4d071660df128122b2512b0c4913da3d16ab591503f7f67be5c1d",
+      "public_sha256": "f281f9b9b4e4d071660df128122b2512b0c4913da3d16ab591503f7f67be5c1d",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/render019_blender.py",
+      "source_sha256": "c5a765620adfa93c3aa84627e96085dd93a85a6c861af8b5e4c041e11219d44e",
+      "public_sha256": "c5a765620adfa93c3aa84627e96085dd93a85a6c861af8b5e4c041e11219d44e",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/render019_closeup.py",
+      "source_sha256": "3097dc261b377f7e33b4d60756ad11430cfdd2dd8aeb90035d3aedd2023dd386",
+      "public_sha256": "3097dc261b377f7e33b4d60756ad11430cfdd2dd8aeb90035d3aedd2023dd386",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/render019_facades.py",
+      "source_sha256": "5c3b951119da3cf23e990384aa8afed12a999998c3bd002054c81cf6373bed1b",
+      "public_sha256": "5c3b951119da3cf23e990384aa8afed12a999998c3bd002054c81cf6373bed1b",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/dense_cleanup_verified.py",
+      "source_sha256": "c29a37ee9c66d1c2aae99a86d7c5bf46d0a69ddb80bcd87bf2f6acd4bcd95c62",
+      "public_sha256": "c29a37ee9c66d1c2aae99a86d7c5bf46d0a69ddb80bcd87bf2f6acd4bcd95c62",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/resume_dense_after_cleanup_worker.py",
+      "source_sha256": "19ffcd9c9b6df06d73a0d0318d9938d45fbbbc33cd9dcedb9bac3fbb0e066a0a",
+      "public_sha256": "19ffcd9c9b6df06d73a0d0318d9938d45fbbbc33cd9dcedb9bac3fbb0e066a0a",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/cleanup_resume_eight.py",
+      "source_sha256": "42a73a4891448a83225643f41e684bac6261982083b2027c552ae6671f2074c6",
+      "public_sha256": "f9d4cce57adfb66066b764af830f5d2aa1402681dac5b2e21761379c8da1f20e",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/repair_cleanup_resume_eight.py",
+      "source_sha256": "2d2355f6d030fb5839d21e05e0966bb88c6fda4231f1cb454c972a33fd23e3c1",
+      "public_sha256": "132e013b924cc3095d2e41329c97c741f6cc66de917637d52c6883a95cf3ccc2",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/inventory_dense_cleanup.py",
+      "source_sha256": "5cb3fe8abe5dcd1acaf542e33d5fdadb8db1f32d96c319e19d40c51243b2dd8c",
+      "public_sha256": "24c19c81304c7677aaca4d88a1355d373d8d0d1cbbdd8f2d096cb18e22fc76a8",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/simplify019_70.py",
+      "source_sha256": "45919494b5e1053429e30ebf5dd2fc1ab318204294a47dc1b36a080cf6d1f9a8",
+      "public_sha256": "45919494b5e1053429e30ebf5dd2fc1ab318204294a47dc1b36a080cf6d1f9a8",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/color019_dense_vertices.py",
+      "source_sha256": "1073828fdaeb38adba992d986263b6951ea74f1e9ed86a6ea62bb45ec1426f9e",
+      "public_sha256": "1073828fdaeb38adba992d986263b6951ea74f1e9ed86a6ea62bb45ec1426f9e",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/start_color019.py",
+      "source_sha256": "e2696f280b97842fb74e1280a10dc8f75397f82e0544065ecdc226fd4347fd45",
+      "public_sha256": "c62fbe0099461516aeb017fcddcfafa0388ff11ede69917d9c7b8af80b8d3cb8",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/collect_finish019_rgb.py",
+      "source_sha256": "dfcf8452fb5e0e2289e8257b857b857026eb869fbca47910e6dbd37db9509b72",
+      "public_sha256": "9407363837545dfe3198cd552e752bea284e42318fe1e0401750e08d840c2a82",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/finish019_rgb.py",
+      "source_sha256": "50088f1f06586da1b9fb769facafc3b650ff71430587baf977d85085f4ad868c",
+      "public_sha256": "50088f1f06586da1b9fb769facafc3b650ff71430587baf977d85085f4ad868c",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/render019_rgb.py",
+      "source_sha256": "55cfd81d02a5a577df20d25aec18db9208a7982ce06a545cda71ab93b30610b8",
+      "public_sha256": "55cfd81d02a5a577df20d25aec18db9208a7982ce06a545cda71ab93b30610b8",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/light019_official_budget.py",
+      "source_sha256": "8a870af47fabfe6e91b5451d2e8927eb0f7660603ad34013cdbfab16dd8bdb26",
+      "public_sha256": "8a870af47fabfe6e91b5451d2e8927eb0f7660603ad34013cdbfab16dd8bdb26",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/export_aligned_mesh.py",
+      "source_sha256": "da9e0b2dc98075705131449f6835fed2f4f495873bb8a222874f2b7a23c1ca1b",
+      "public_sha256": "da9e0b2dc98075705131449f6835fed2f4f495873bb8a222874f2b7a23c1ca1b",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/render_aligned_mesh.py",
+      "source_sha256": "4f7aceb70da27107bc5059b8f6a0e8bb40bc17382d5aa906296ae56ce28a7108",
+      "public_sha256": "4f7aceb70da27107bc5059b8f6a0e8bb40bc17382d5aa906296ae56ce28a7108",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/package_completed_meshes.py",
+      "source_sha256": "714a42756c15595454345804428fac06ac11fd70ed8ce5a32d1a753bd2e74dcc",
+      "public_sha256": "4fd6d911bba3dfaff6363d2a45e52ca855235dc6ad3ad3469ce1211f62e80947",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/package026_existing.py",
+      "source_sha256": "1ae42b72235fa4e3c75d6644b48385a695642489731da0db718c570376fce41b",
+      "public_sha256": "529d0ca5432ae5e0b531ad0ef4957c54f53651c009c31974f8afcdc677ff610b",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/resume026_rgb_finish.py",
+      "source_sha256": "a767edc011b5ce08e57a5af62568967512ef295ef3440f2bdfda50c56b13f183",
+      "public_sha256": "86b4e85f540d056d4b10a69e7b3a2a705abd5d8f85358d55d51774a0856c3033",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/refine019_trial_worker.py",
+      "source_sha256": "64328a347a2d13732ecfd758b3a9987f449e733d8d08dabb3d6fa916b9d88178",
+      "public_sha256": "64328a347a2d13732ecfd758b3a9987f449e733d8d08dabb3d6fa916b9d88178",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/start_refine019_trial.py",
+      "source_sha256": "41ae409d7e71c20b5b7e13c70b1f37456a971182317d52fbb3cb044e92d01b2f",
+      "public_sha256": "e0258cc5bd33073a62067a4d917d5646c0bd7c40bb7a187c5c91eb51b80620eb",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/render_sparse_top8k.py",
+      "source_sha256": "35af20e7384fcf1108e97be445a073c677d2101bc382b280e239dcd9cd8bd256",
+      "public_sha256": "35af20e7384fcf1108e97be445a073c677d2101bc382b280e239dcd9cd8bd256",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/test_sparse_visualizer.py",
+      "source_sha256": "39dab91ca43050863e71f1e6dd02c7d8af92d6915f2a89982eba9791785a2c75",
+      "public_sha256": "39dab91ca43050863e71f1e6dd02c7d8af92d6915f2a89982eba9791785a2c75",
+      "sanitized": false
+    },
+    {
+      "path": "operations/manual-editor-20261117/free026_install_archives.py",
+      "source_sha256": "8323ecfa93dc9b1668c593443b02f279aefc4d06c55604144a68114bb3a44e93",
+      "public_sha256": "7a5c38dd7a281044890f3c63eaf1f092649a4d8971edad8bbb4cd90a4c7d79cc",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/audit026_freeable.py",
+      "source_sha256": "2bfaacc9779009714f619abed3bd718cf81f469c06c2bfeba4dda822987ba18c",
+      "public_sha256": "5d6bfb0807140b18370b6a4b2194046179a7a7538653913021415b81638a62ca",
+      "sanitized": true
+    },
+    {
+      "path": "operations/manual-editor-20261117/render-gallery.html",
+      "source_sha256": "acea121722b348b79b6133b1cd9104e8c9c1c0b18400a85d81d10ddcbe538616",
+      "public_sha256": "acea121722b348b79b6133b1cd9104e8c9c1c0b18400a85d81d10ddcbe538616",
+      "sanitized": false
+    }
+  ],
+  "excluded": [
+    "scientific results",
+    "manual revisions and placement matrices",
+    "credentials",
+    "private inventories",
+    "external photogrammetry pipeline and alignment engine code",
+    "runtime packages"
+  ],
+  "note": "Operational scripts are historical, installation-bound and not safe to run on import; explicit user authorization required."
+}
